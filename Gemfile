@@ -67,8 +67,14 @@ gem "refile-mini_magick"
 gem 'font-awesome-sass', '~> 5.13'
 
 gem 'slim-rails'
-
 gem 'html2slim'
 
 gem 'pry-byebug'
 
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails'
+
+gem 'devise'
+gem 'devise-i18n'
+
+gem "kaminari"

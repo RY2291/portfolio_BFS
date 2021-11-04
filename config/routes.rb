@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+# -------------------管理者-----------------------------------------------
+  
+  devise_for :admin, controllers: {
+    sessions: "admin/sessions"
+  }
+  
+# -------------------ユーザ-----------------------------------------------
+  devise_for :users, controllers: {
+    registrations: "public/registrations",
+    sessions: 'public/sessions'
+  }
 end
