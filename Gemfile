@@ -66,7 +66,6 @@ gem "refile-mini_magick"
 
 gem 'font-awesome-sass', '~> 5.13'
 
-gem 'slim-rails'
 gem 'html2slim'
 
 gem 'pry-byebug'

@@ -7,8 +7,16 @@ Rails.application.routes.draw do
   }
   
 # -------------------ユーザ-----------------------------------------------
-  devise_for :users, controllers: {
+  devise_for :user, controllers: {
     registrations: "public/registrations",
     sessions: 'public/sessions'
   }
+  
+  scope module: :public do
+    get "building_facade_share" => "homes#top", as: "top"
+    resources :user, only: [:show, :edit, :update]
+     get "user/:id/withdraw" => "user#withdraw", as: "user_withdraw"
+    resources :posts
+  end
+  
 end
