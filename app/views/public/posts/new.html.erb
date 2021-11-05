@@ -20,10 +20,25 @@
         <!--<#%= %>-->
       </div>
       <div class="form-group">
-        
+        <%= f.label :post_images_images, "写真" %>
+        <img id="preview" style="width: 40%;">
+        <%= f.attachment_field :post_images_images, multiple: true %>
       </div>
       <%= f.submit "投稿をする"%>
       <% end %>
     </div>
   </div>
 </div>
+
+
+<!----------------画像プレビュー-------------------->
+<script>
+// function(e) {} は無名関数＝＞イベントが発火したら即時実行する関数
+  $("#post_post_images_images").on("change", function(e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $("#preview").attr("src", e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
+  })
+</script>

@@ -6,7 +6,7 @@ class Public::PostsController < ApplicationController
   
   def create
     @post = Post.new(post_params)
-    @post.user_id = current_user
+    @post.user_id = current_user.id
     if @post.save
       flash[:notice] = "投稿が完了しました！"
       redirect_to posts_path
@@ -24,9 +24,12 @@ class Public::PostsController < ApplicationController
   end
   
   def edit
+    @post = Post.find(params[:id])
   end
   
   def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
   end
   
   def destroy
@@ -35,7 +38,8 @@ class Public::PostsController < ApplicationController
   private
   def post_params
     #フォームが未完成のため、フォームを追加次第カラムを追加
-    params.require(:post).permit(:title, :introduction, :address,)
+    # [ ]は複数画像idのため必要
+    params.require(:post).permit(:title, :introduction, :address, :post_image, post_images_images: [])
   end
   
 end
