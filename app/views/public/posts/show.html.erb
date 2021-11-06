@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "no_image-.jpg" %>
+    
+    </div>
+  </div>
+</div>
+
+  <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"} %>
