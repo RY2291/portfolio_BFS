@@ -10,11 +10,11 @@
   <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"} %>
   
   <% if @post.favorited_by?(current_user) %>
-    <%= link_to  post_favorites_path(@post), method: :delete do %>
+    <%= link_to  post_favorites_path(@post.id), method: :delete do %>
       <i class="fas fa-heart"></i><%= @post.favorites.count%>
     <% end %>
   <% else %>
-    <%= link_to  post_favorites_path(@post), method: :post do %>
+    <%= link_to  post_favorites_path(@post.id), method: :post do %>
       <i class="far fa-heart"></i><%= @post.favorites.count%>
     <% end %>
   <% end %>
