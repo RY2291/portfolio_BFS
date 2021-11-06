@@ -2,36 +2,80 @@
   <div class="row">
     <div class="col">
       <%= form_with model: @post, local:true do |f| %>
-      <div class="form-group">
-        <%= f.label :title, "タイトル" %>
-        <%= f.text_field :title, autofocus: "" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :introduction, "説明文" %>
-        <%= f.text_area :introduction %>
-      </div>
-      <div class="form-group">
-        <%= f.label :address, "住所" %>
-        <%= f.text_field :address, placeholder: "東京都港区元赤坂2-1-1" %>
-      </div>
-      <div class="form-group">
-         <!--登録されているジャンルから３つ選択できるフォームor
-        タグを生成してリンク化-->
-        <!--<#%= %>-->
-      </div>
-      <div class="form-group">
-        <%= f.label :post_images_images, "写真" %>
-        <img id="preview" style="width: 40%;">
-        <%= f.attachment_field :post_images_images, multiple: true %>
-      </div>
-      <%= f.submit "投稿をする"%>
+        <div class="form-group">
+          <%= f.label :title, "タイトル" %>
+          <%= f.text_field :title, autofocus: "" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :introduction, "説明文" %>
+          <%= f.text_area :introduction %>
+        </div>
+        <div class="form-group">
+          <%= f.label :address, "住所" %>
+          <%= f.text_field :address, placeholder: "東京都港区元赤坂2-1-1" %>
+        </div>
+        <div class="form-group">
+           <!--登録されているジャンルから３つ選択できるフォームor
+          タグを生成してリンク化-->
+          <!--<#%= %>-->
+        </div>
+        <div class="form-group">
+          <%= f.label :post_images_images, "写真" %>
+          (複数ある場合は、shiftを押しながら選択)
+          <!--プレビュ画像４枚まで表示-->
+          <img id="preview_0" style="width: 15%;">
+          <img id="preview_1" style="width: 15%;">
+          <img id="preview_2" style="width: 15%;">
+          <img id="preview_3" style="width: 15%;">
+          <%= f.attachment_field :post_images_images, multiple: true %>
+        </div>
+        <%= f.submit "投稿をする"%>
       <% end %>
     </div>
   </div>
 </div>
 
 
-<!----------------画像プレビュー-------------------->
+
+<!--画像プレビュ　４枚まで-->
+
+<script>
+  $("#post_post_images_images").on("change", function (e) {
+    if(e.target.files.length > 4){
+      // 4枚以上の画像が選択された時
+      alert("４枚までしか投稿できません!");
+      $("#post_post_images_images").val = "";
+      
+      for( let i = 0; i < 4; i ++) {
+        $(`#preview_${i}`).attr("src", "");
+      }
+      
+    }else{
+      // ４枚まで選択された時にプレビュ表示
+      let reader = new Array(4);
+      for( let i = 0; i < 4; i += 1) {
+        $(`#preview_${i}`).attr("src", "");
+      }
+      
+      for( let i = 0; i < e.target.files.length; i += 1 ){
+        reader[i] = new FileReader();
+        reader[i].onload = finisher(i,e);
+        reader[i].readAsDataURL(e.target.files[i]);
+          
+        function finisher(i,e){
+          return function(e){
+            $(`#preview_${i}`).attr("src", e.target.result);
+          }
+        }
+      }
+    }
+  });
+</script>
+
+
+
+
+<!----------------画像プレビュ　１枚用ー----------------
 <script>
 // function(e) {} は無名関数＝＞イベントが発火したら即時実行する関数
   $("#post_post_images_images").on("change", function(e) {
@@ -42,3 +86,4 @@
     reader.readAsDataURL(e.target.files[0]);
   })
 </script>
+---->

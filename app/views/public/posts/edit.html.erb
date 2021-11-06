@@ -20,8 +20,52 @@
           <%= f.label :address, "住所" %>
           <%= f.email_field :address, class: "form-control" %>
         </div>
+        <div class="form-group">
+          <%= f.label :post_images_images, "写真" %>
+          (複数ある場合は、shiftを押しながら選択)
+          <!--プレビュ画像４枚まで表示-->
+          <img id="preview_0" style="width: 15%;">
+          <img id="preview_1" style="width: 15%;">
+          <img id="preview_2" style="width: 15%;">
+          <img id="preview_3" style="width: 15%;">
+          <%= f.attachment_field :post_images_images, multiple: true %>
+        </div>
         <%= f.submit "変更する", class: "btn btn-primary form-submit-btn" %>
       <% end %>
     </div>
   </div>
 </div>
+
+
+<script>
+  $("#post_post_images_images").on("change", function (e) {
+    if(e.target.files.length > 4){
+      // 4枚以上の画像が選択された時
+      alert("４枚までしか投稿できません!");
+      $("#post_post_images_images").val = "";
+      
+      for( let i = 0; i < 4; i ++) {
+        $(`#preview_${i}`).attr("src", "");
+      }
+      
+    }else{
+      // ４枚まで選択された時にプレビュ表示
+      let reader = new Array(4);
+      for( let i = 0; i < 4; i += 1) {
+        $(`#preview_${i}`).attr("src", "");
+      }
+      
+      for( let i = 0; i < e.target.files.length; i += 1 ){
+        reader[i] = new FileReader();
+        reader[i].onload = finisher(i,e);
+        reader[i].readAsDataURL(e.target.files[i]);
+          
+        function finisher(i,e){
+          return function(e){
+            $(`#preview_${i}`).attr("src", e.target.result);
+          }
+        }
+      }
+    }
+  });
+</script>
