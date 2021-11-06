@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :user, only: [:show, :edit, :update]
      get "user/:id/withdraw" => "user#withdraw", as: "user_withdraw"
     resources :posts do
-      resource :favorites, only: [:create, :destory]
+      resource :favorites, only: [:create, :destroy]
     end
   end
   
