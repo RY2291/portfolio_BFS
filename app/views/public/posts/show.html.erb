@@ -26,5 +26,6 @@
   
   <% @post.comments.each do |comment| %>
     <%= comment.user.name %>
+    <%= %>
     <%= comment.comment %>
   <% end %>
