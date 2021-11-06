@@ -6,5 +6,6 @@
     </div>
   </div>
 </div>
-
+<% if @post.user == current_user %>
   <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"} %>
+<% end %>
