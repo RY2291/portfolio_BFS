@@ -11172,3 +11172,378 @@ Processing by Public::UserController#show as HTML
 Completed 200 OK in 86ms (Views: 81.4ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20211106075635)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20211106075635_create_comments.rb:3
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post_id" integer, "comment" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211106075635_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211106075635"]]
+  ↳ bin/rails:9
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/user/2/edit" for 115.177.69.94 at 2021-11-06 09:55:50 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::UserController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/user_controller.rb:8
+  Rendering public/user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/user/edit.html.erb:41
+  Rendered public/user/edit.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 1247ms (Views: 1191.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/attachments/044b7f06d1c2724d702db6ad339f52e43def6ada/store/ab91fc2eb288234079c28e7dd7375afd89de4ac707d2fbc39b379ada515d/profile_image.jpg" for 115.177.69.94 at 2021-11-06 09:55:53 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-06 09:55:53 +0000] GET "/044b7f06d1c2724d702db6ad339f52e43def6ada/store/ab91fc2eb288234079c28e7dd7375afd89de4ac707d2fbc39b379ada515d/profile_image.jpg" 200 11.2ms
+
+Started GET "/user/2" for 115.177.69.94 at 2021-11-06 09:56:41 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::UserController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/user_controller.rb:4
+  Rendering public/user/show.html.erb within layouts/application
+  Rendered public/user/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 101ms (Views: 98.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/2" for 115.177.69.94 at 2021-11-06 09:56:44 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::UserController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/user_controller.rb:4
+  Rendering public/user/show.html.erb within layouts/application
+  Rendered public/user/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 116ms (Views: 112.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts/4/comments" for 115.177.69.94 at 2021-11-06 09:56:52 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q7e+3/QIYv1KJ2Lqew0PH4gtMqQGqSnyvY1kJ+ObdTduvIGkwmde8yJ8/cR9vLz4Bd/ck+mFIeLw77iT3+bpOA==", "comment"=>{"comment"=>"rf"}, "commit"=>"コメントする", "post_id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:5
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'comment' for Post.):
+  
+app/controllers/public/comments_controller.rb:5:in `create'
+Started GET "/posts/4" for 115.177.69.94 at 2021-11-06 10:03:19 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:24
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:18
+  Rendered public/posts/show.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 186ms (Views: 166.0ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/posts/4/comments" for 115.177.69.94 at 2021-11-06 10:04:56 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DoKlyJ2q2oHafl2QApwEcZRB3il9D8ZHQ04z0By6lLfLiZqzq8Xmj7Ilwr4ELbeWGbMwHpIjzlcOLO9kIMcIuA==", "comment"=>{"comment"=>"ｓｓｓ"}, "commit"=>"コメントする", "post_id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:5
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'comment' for Post.):
+  
+app/controllers/public/comments_controller.rb:5:in `create'
+Started POST "/posts/4/comments" for 115.177.69.94 at 2021-11-06 10:10:29 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DoKlyJ2q2oHafl2QApwEcZRB3il9D8ZHQ04z0By6lLfLiZqzq8Xmj7Ilwr4ELbeWGbMwHpIjzlcOLO9kIMcIuA==", "comment"=>{"comment"=>"ｓｓｓ"}, "commit"=>"コメントする", "post_id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/comments_controller.rb:7
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/4
+Completed 302 Found in 189ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/posts/4" for 115.177.69.94 at 2021-11-06 10:10:30 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:24
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:18
+  Rendered public/posts/show.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 211ms (Views: 204.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts/4/comments" for 115.177.69.94 at 2021-11-06 10:11:29 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"op2cSZrfIvvkfSoNON+YoBUu3WMluAOAROb09b+s4SJnlqMyrLAe9YwmtSM+bitHmNwzVMqUC5AJhChBg9F9LQ==", "comment"=>{"comment"=>"ff"}, "commit"=>"コメントする", "post_id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/comments_controller.rb:7
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:7
+  [1m[36mComment Create (13.9ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "post_id", "comment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["post_id", 4], ["comment", "ff"], ["created_at", "2021-11-06 10:11:29.600771"], ["updated_at", "2021-11-06 10:11:29.600771"]]
+  ↳ app/controllers/public/comments_controller.rb:7
+  [1m[35m (28.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/comments_controller.rb:7
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/4
+Completed 302 Found in 115ms (ActiveRecord: 45.4ms)
+
+
+Started GET "/posts/4" for 115.177.69.94 at 2021-11-06 10:11:29 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:24
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:18
+  Rendered public/posts/show.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 114ms (Views: 109.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/4" for 115.177.69.94 at 2021-11-06 10:25:23 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:24
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:28
+  Rendered public/posts/show.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 168ms (Views: 140.0ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/posts/4/comments" for 115.177.69.94 at 2021-11-06 10:25:34 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R6Hwg1Zd6ToeUJoGM30X0bHqMA5WsTyyAlGTPuHuLA2Cqs/4YDLVNHYLBSg1zKQ2PBjeObmdNKJPM0+K3ZOwAg==", "comment"=>{"comment"=>"rr"}, "commit"=>"コメントする", "post_id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/comments_controller.rb:7
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/comments_controller.rb:7
+  [1m[36mComment Create (2.5ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "post_id", "comment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["post_id", 4], ["comment", "rr"], ["created_at", "2021-11-06 10:25:34.906772"], ["updated_at", "2021-11-06 10:25:34.906772"]]
+  ↳ app/controllers/public/comments_controller.rb:7
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/comments_controller.rb:7
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/4
+Completed 302 Found in 26ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/posts/4" for 115.177.69.94 at 2021-11-06 10:25:35 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:24
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:27
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:28
+  Rendered public/posts/show.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 146ms (Views: 141.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts/4/favorites" for 115.177.69.94 at 2021-11-06 10:25:58 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"AZZ76PftlTvFfBF0JxbqOkh4vN7l88MI7Z1VCJht1gfEnUSTwYKpNa0njlohp1ndxYpS6Qrfyxig/4m8pBBKCA==", "post_id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[36mFavorite Create (3.2ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["post_id", 4], ["created_at", "2021-11-06 10:25:58.094962"], ["updated_at", "2021-11-06 10:25:58.094962"]]
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:6
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/4
+Completed 302 Found in 38ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/posts/4" for 115.177.69.94 at 2021-11-06 10:25:58 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:24
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:14
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:27
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:28
+  Rendered public/posts/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 109ms (Views: 106.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/posts/4/favorites" for 115.177.69.94 at 2021-11-06 10:25:59 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::FavoritesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sqcPP0etZd2On8+ncGhbsIyfk5m40S9qoMryq5RMxMN3rDBEccJZ0+bEUIl22ehXAW19rlf9J3rtqC4fqDFYzA==", "post_id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:12
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."post_id" = ? LIMIT ?[0m  [["user_id", 2], ["post_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:13
+  [1m[36mFavorite Destroy (1.7ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/public/favorites_controller.rb:13
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:13
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/4
+Completed 302 Found in 19ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/posts/4" for 115.177.69.94 at 2021-11-06 10:25:59 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:24
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/public/posts/show.html.erb:27
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:28
+  Rendered public/posts/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 170ms (Views: 167.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/posts/4" for 115.177.69.94 at 2021-11-06 10:26:06 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vpz2BDHSkhKVpSdoNuEGsLlQWMVpwRf9QCEOlqx8ecB7l8l/B72uHP3+uEYwULVXNKK28obtH+0NQ9IikAHlzw==", "id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/posts_controller.rb:40
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/controllers/public/posts_controller.rb:40
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/controllers/public/posts_controller.rb:40
+  [1m[36mComment Destroy (2.0ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/public/posts_controller.rb:40
+  [1m[36mComment Destroy (0.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/public/posts_controller.rb:40
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/controllers/public/posts_controller.rb:40
+  [1m[36mPost Destroy (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/public/posts_controller.rb:40
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/posts_controller.rb:40
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:41
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/user/2
+Completed 302 Found in 34ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/user/2" for 115.177.69.94 at 2021-11-06 10:26:07 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::UserController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/user_controller.rb:4
+  Rendering public/user/show.html.erb within layouts/application
+  Rendered public/user/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 110ms (Views: 104.8ms | ActiveRecord: 0.3ms)
+
+

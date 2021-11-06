@@ -16,7 +16,10 @@ Rails.application.routes.draw do
     get "building_facade_share" => "homes#top", as: "top"
     resources :user, only: [:show, :edit, :update]
      get "user/:id/withdraw" => "user#withdraw", as: "user_withdraw"
-    resources :posts
+    resources :posts do
+      resources :comments, only: [:create, :destroy]
+     resource :favorites, only: [:create, :destroy]
+    end
   end
   
 end

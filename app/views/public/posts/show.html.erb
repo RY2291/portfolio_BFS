@@ -8,3 +8,23 @@
 </div>
 
   <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"} %>
+  
+   <% if @post.favorited_by?(current_user) %>
+    <%= link_to  post_favorites_path(@post), method: :delete do %>
+      <i class="fas fa-heart"></i><%= @post.favorites.count%>
+    <% end %>
+  <% else %>
+    <%= link_to  post_favorites_path(@post), method: :post do %>
+      <i class="far fa-heart"></i><%= @post.favorites.count%>
+    <% end %>
+  <% end %>
+  
+  <%= form_with(model:[@post, @comment], local: true) do |f| %>
+    <%= f.text_area :comment, placeholder: "感想などをコメントしてみましょう！" %>
+    <%= f.submit "コメントする" %>
+  <% end %>
+  
+  <% @post.comments.each do |comment| %>
+    <%= comment.user.name %>
+    <%= comment.comment %>
+  <% end %>
