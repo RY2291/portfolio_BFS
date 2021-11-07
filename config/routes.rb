@@ -1,25 +1,28 @@
 Rails.application.routes.draw do
-  
+
 # -------------------管理者-----------------------------------------------
-  
+
   devise_for :admin, controllers: {
     sessions: "admin/sessions"
   }
-  
+
 # -------------------ユーザ-----------------------------------------------
   devise_for :user, controllers: {
     registrations: "public/registrations",
     sessions: 'public/sessions'
   }
-  
+
   scope module: :public do
     get "building_facade_share" => "homes#top", as: "top"
-    resources :user, only: [:show, :edit, :update]
+    resources :user, only: [:show, :edit, :update] do
+      resource :relationships, only: [:create, :destroy]
+      get "follow" => "relationships#follow", as: "follow"
+    end
      get "user/:id/withdraw" => "user#withdraw", as: "user_withdraw"
     resources :posts do
       resources :comments, only: [:create, :destroy]
      resource :favorites, only: [:create, :destroy]
     end
   end
-  
+
 end
