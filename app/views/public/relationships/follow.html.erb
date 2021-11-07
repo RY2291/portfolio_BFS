@@ -4,14 +4,14 @@
       フォロー中
       <% @following.each do |following| %>
         <%= attachment_image_tag following, :profile_image, :fill, 100, 100, fallback: "no_image-.jpg"  %>
-        <%= following.user.name %>
+        <%= following.name %>
       <% end %>
     </div>
     <div class="col-6">
       フォロワー
-      <% @follow.each do |following| %>
+      <% @followers.each do |following| %>
         <%= attachment_image_tag following, :profile_image, :fill, 100, 100, fallback: "no_image-.jpg"  %>
-        <%= following.user.name %>
+        <%= following.name %>
       <% end %>
     </div>
   </div>
