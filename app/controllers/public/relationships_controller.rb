@@ -13,8 +13,8 @@ class Public::RelationshipsController < ApplicationController
   end
   
   def follow
-    @following = User.find(params[:id]).followings.where.not(id: current_user.id)
-    @followers =  User.find(params[:id]).followers.where.not(id: current_user.id)
+    @following = User.find(params[:user_id]).followings.where.not(id: current_user.id)
+    @followers =  User.find(params[:user_id]).followers.where.not(id: current_user.id)
   end
 
 end
