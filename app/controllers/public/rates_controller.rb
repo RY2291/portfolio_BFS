@@ -11,3 +11,4 @@ class Public::RatesController < ApplicationController
   end
 
 end
+# s
