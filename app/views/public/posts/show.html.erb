@@ -1,13 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-2">
-      <!--<#%= attachment_image_tag @post, :post_image, :fill, 100, 100, fallback: "no_image-.jpg" %>-->
-
+      <% @post.post_images.each do |image| %>
+        <%= attachment_image_tag image, :image, :fill, 100, 100, fallback: "no_image-.jpg" %>
+      <% end %>
     </div>
   </div>
 </div>
 <!--評価を平均点て表示-->
-<div class="review-rating" id="star-read" data-score="<%= @post.comments.average(:rate) %>">評価</div>
+<div class="review-rating" id="star-read" data-score="<%= @post.rate %>">評価</div>
 <% if @user == current_user %>
   <%= link_to "投稿を編集", edit_post_path(@post) %>
 <% end %>
@@ -31,7 +32,7 @@
   <% end %>
 
   <!--評価送信フォーム-->
-  <%= form_with model: @post, local: true do |f| %>
+  <%= form_with model: @rate, url: rate_path, method: :post, local: true do |f| %>
     <div id="star">
       <%= f.hidden_field :rate, :value => "score"%>
     </div>
@@ -55,7 +56,7 @@
     starOn: "<%= asset_path("star-on.png") %>",
     starHalf: "<%= asset_path("star-half.png") %>",
     starOff: "<%= asset_path("star-off.png") %>",
-    scoreName: "post[rate]",
+    scoreName: "rate[rate]",
     half: true,
   });
 // 評価表示

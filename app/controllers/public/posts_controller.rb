@@ -22,9 +22,9 @@ class Public::PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    # @post.post_image_id = PostImage.find_by(id: post_id)
     @user = @post.user
     @comment = Comment.new
+    @rate = Rate.new
   end
 
   def edit
