@@ -15948,3 +15948,72 @@ NameError (undefined local variable or method `post_id' for #<Public::PostsContr
 Did you mean?  post_url):
   
 app/controllers/public/posts_controller.rb:25:in `show'
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ? LIMIT ?[0m  [["post_id", 10], ["LIMIT", 11]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRates (20211108113524)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20211108113524_create_rates.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "rates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "user_id" integer, "rate" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211108113524_create_rates.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211108113524"]]
+  ↳ bin/rails:9
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/posts/9" for 115.177.69.94 at 2021-11-08 11:46:14 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 9], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/public/posts/show.html.erb:44
+  Rendered public/posts/show.html.erb within layouts/application (4623.3ms)
+Completed 200 OK in 5164ms (Views: 5070.3ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/rate" for 115.177.69.94 at 2021-11-08 11:46:28 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dTPSEBmTFRR6SvX4NRYaFHErX8HZl4MN1bQo8vFwFSru57jj2U93meNTBhBzW5KiBOZ4Uamm3HyGegIzRze/Qg==", "rate"=>{"rate"=>"3"}, "commit"=>"評価する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/rates_controller.rb:5
+  [1m[36mRate Create (4.1ms)[0m  [1m[32mINSERT INTO "rates" ("rate", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["rate", 3.0], ["created_at", "2021-11-08 11:46:28.607258"], ["updated_at", "2021-11-08 11:46:28.607258"]]
+  ↳ app/controllers/public/rates_controller.rb:5
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/rates_controller.rb:5
+No template found for Public::RatesController#create, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 12.7ms)
+
+
+  [1m[36mRate Load (0.5ms)[0m  [1m[34mSELECT  "rates".* FROM "rates" LIMIT ?[0m  [["LIMIT", 11]]
