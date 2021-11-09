@@ -79,10 +79,6 @@ gem 'devise-i18n'
 gem "kaminari"
 
 gem 'geocoder'
-<<<<<<< HEAD
 gem "gon"
 
 gem 'dotenv-rails'
-=======
-gem "gon"
->>>>>>> 2a531a00e267ef2afe4ee843292e65c7d3ccd242
