@@ -1,0 +1,67 @@
+<h1>map</h1>
+
+<%= form_with url: map_request_path, method: :get do |f| %>
+  <%= f.text_field :address %>
+  <%= f.submit "地図表示" %>
+<% end %>
+
+
+<div id="map"></div>
+
+
+<style>
+  #map {
+    height: 600px;
+    width: 100;
+  }
+</style>
+
+<!--gemのgeocoderを利用(非同期)-->
+<script>
+  let mapInstance
+
+  function initMap(){
+    mapInstance = new google.maps.Map(document.getElementById("map"), {
+      center: {lat: 35.659, lng: 139.700},
+      zoom: 14
+    });
+  }
+</script>
+
+
+
+
+<!--Google Geocoding APIを利用-->
+<!--<script>-->
+<!--  let map-->
+<!--  let geocoder-->
+
+<!--  function initMap(){-->
+<!--    geocoder = new google.maps.Geocoder()-->
+
+<!--    map = new google.maps.Map(document.getElementById("map"), {-->
+<!--      center: {lat: 40.7828, lng:-73.9653},-->
+<!--      zoom: 12-->
+<!--    });-->
+<!--  }-->
+
+<!--  function codeAddress(){-->
+    <!--// 入力を取得-->
+<!--    let inputAddress = document.getElementById("address").value;-->
+
+<!--    geocoder.geocode( { "address": inputAddress}, function(results, status){-->
+<!--      if(status == "OK"){-->
+<!--        map.setCenterで地図が移動-->
+<!--        map.setCenter(results[0].geometry.location);-->
+
+<!--        const marker = new google.maps.Marker({-->
+<!--          map: map,-->
+<!--          position: results[0].geometry.location-->
+<!--        });-->
+<!--      } else {-->
+<!--        alert("Geocode was not successful for the following reason: " + status)-->
+<!--      }-->
+<!--    })-->
+<!--  }-->
+<!--</script>-->
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>
