@@ -7,9 +7,12 @@ class Post < ApplicationRecord
   end
 
   has_many :comments, dependent: :destroy
-
+  has_many :rates, dependent: :destroy
 
   has_many :post_images, dependent: :destroy
   accepts_attachments_for :post_images, attachment: :image
   attachment :post_image
+  
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
 end

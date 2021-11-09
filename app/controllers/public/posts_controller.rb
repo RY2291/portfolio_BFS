@@ -2,6 +2,7 @@ class Public::PostsController < ApplicationController
 
   def new
     @post = Post.new
+    gon.post = @post
   end
 
   def create
@@ -24,6 +25,8 @@ class Public::PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = @post.user
     @comment = Comment.new
+    @rate = Rate.new
+    
   end
 
   def edit
@@ -45,7 +48,8 @@ class Public::PostsController < ApplicationController
   def post_params
     #フォームが未完成のため、フォームを追加次第カラムを追加
     # [ ]は複数画像idのため必要
-    params.require(:post).permit(:title, :introduction, :address, :post_image, post_images_images: [])
+    params.require(:post).permit(:title, :introduction, :address, :post_image, :rate, post_images_images: [])
+  
   end
 
 end

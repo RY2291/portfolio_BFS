@@ -1,15 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-md-2">
-      <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "no_image-.jpg" %>
-    
+      <% @post.post_images.each do |image| %>
+        <%= attachment_image_tag image, :image, :fill, 100, 100, fallback: "no_image-.jpg" %>
+      <% end %>
     </div>
   </div>
 </div>
-
-
+<!--評価を平均点て表示-->
+<div class="review-rating" id="star-read" data-score="<%= @post.rates.average(:rate) %>">評価</div>
+<% if @user == current_user %>
+  <%= link_to "投稿を編集", edit_post_path(@post) %>
+<% end %>
   <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"} %>
-  
+
    <% if @post.favorited_by?(current_user) %>
     <%= link_to  post_favorites_path(@post), method: :delete do %>
       <i class="fas fa-heart"></i><%= @post.favorites.count%>
@@ -19,14 +23,83 @@
       <i class="far fa-heart"></i><%= @post.favorites.count%>
     <% end %>
   <% end %>
-  
-  <%= form_with(model:[@post, @comment], local: true) do |f| %>
+
+
+  <!--コメント送信フォーム-->
+  <%= form_with(model:[@post, @comment], local:true) do |f| %>
     <%= f.text_area :comment, placeholder: "感想などをコメントしてみましょう！" %>
     <%= f.submit "コメントする" %>
   <% end %>
-  
+
+  <!--評価送信フォーム-->
+  <%= form_with(model:[@rate,@post], url: rate_path(post_id: @post), method: :post, local: true) do |f| %>
+    <div id="star">
+      <%= f.hidden_field :rate, :value => "score"%>
+    </div>
+    <%= f.submit "評価する" %>
+  <% end %>
+
+
+<!--コメントを表示-->
   <% @post.comments.each do |comment| %>
     <%= comment.user.name %>
     <%= %>
     <%= comment.comment %>
   <% end %>
+
+<!--地図表示-->
+<div id="map"></div>
+<style>
+  #map {
+    height: 300px;
+    width: 300px;
+  }
+</style>
+
+
+
+<script>
+// 地図表示
+  // function initMap() {
+  //   let test ={lat: <#%= @post.latitude %>, lng: <#%= @post.longitude %>}
+  //   let map =new google.maps.Map(document.getElementById("map"), {
+  //           zoom: 15,
+  //           center: test
+  //           });
+  //   let transitLayer = new google.maps.TransitLayer();
+  //   transitLayer.setMap(map);
+    
+  //   let contentString = "住所:<#%= @post.address %>";
+  //   let inflowindow = new google.maps.InfoWindow({
+  //     content: contentString
+  //   });
+    
+  //   let marker = new google.maps.Marker({
+  //             position:test,
+  //             map: map,
+  //             title: contentString
+  //           });
+  //   marker.addLisrener("click", function(){
+  //     infowindow.open(map, marker);
+  //   });
+  // }
+//評価投稿
+  $("#star").raty({
+    starOn: "<%= asset_path("star-on.png") %>",
+    starHalf: "<%= asset_path("star-half.png") %>",
+    starOff: "<%= asset_path("star-off.png") %>",
+    scoreName: "rate[rate]",
+    half: true,
+  });
+// 評価表示
+  $("#star-read").raty({
+    starOn: "<%= asset_path("star-on.png") %>",
+    starHalf: "<%= asset_path("star-half.png") %>",
+    starOff: "<%= asset_path("star-off.png") %>",
+    source: function(){
+      return $(this).attr("data-score")
+    },
+    readOnly: true
+  });
+</script>
+ <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
