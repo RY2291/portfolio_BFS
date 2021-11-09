@@ -3,10 +3,10 @@
 (function(){
     <!--posに位置情報を持たせる-->
     let pos = new google.maps.LatLng(
-        <!--latitude(緯度)-->
-        <%= @LatLng[0] %>,
-        <!--longitude(経度)-->
-        <%= @LatLng[1] %>
+    <!--latitude(緯度)-->
+    <%= @latlng[0] %>,
+    <!--longitude(経度)-->
+    <%= @latlng[1] %>
     );
     <!--google.maps.MarkerでGoogleMap上の指定位置にマーカが立つ-->
     mapInstance.setCenter(pos)

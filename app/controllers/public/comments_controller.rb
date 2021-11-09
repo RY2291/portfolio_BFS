@@ -1,7 +1,7 @@
 class Public::CommentsController < ApplicationController
 
   def create
-    post = Post.find(params[:post_id])
+    post = Post.find(params[:id])
     comment = current_user.comments.new(comment_params)
     comment.post_id = post.id
     if comment.save
