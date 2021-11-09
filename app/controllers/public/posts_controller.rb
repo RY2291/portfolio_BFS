@@ -48,7 +48,6 @@ class Public::PostsController < ApplicationController
     #フォームが未完成のため、フォームを追加次第カラムを追加
     # [ ]は複数画像idのため必要
     params.require(:post).permit(:title, :introduction, :address, :post_image, :rate, post_images_images: [])
-  
   end
 
 end

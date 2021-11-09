@@ -33,6 +33,7 @@
 
   <!--評価送信フォーム-->
   <%= form_with(model:[@rate,@post], url: rate_path(post_id: @post), method: :post, local: true) do |f| %>
+
     <div id="star">
       <%= f.hidden_field :rate, :value => "score"%>
     </div>
@@ -41,6 +42,7 @@
 
 
 <!--コメントを表示-->
+
   <% @post.comments.each do |comment| %>
     <%= comment.user.name %>
     <%= %>
@@ -90,7 +92,6 @@
 
 
 
-
 <script>
 //評価投稿
   $("#star").raty({
@@ -111,3 +112,4 @@
     readOnly: true
   });
 </script>
+
