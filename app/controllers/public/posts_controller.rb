@@ -26,7 +26,6 @@ class Public::PostsController < ApplicationController
     @user = @post.user
     @comment = Comment.new
     @rate = Rate.new
-    
   end
 
   def edit

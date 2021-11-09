@@ -49,6 +49,7 @@
 
 <!--地図表示-->
 <div id="map"></div>
+
 <style>
   #map {
     height: 300px;
@@ -59,30 +60,38 @@
 
 
 <script>
-// 地図表示
-  // function initMap() {
-  //   let test ={lat: <#%= @post.latitude %>, lng: <#%= @post.longitude %>}
-  //   let map =new google.maps.Map(document.getElementById("map"), {
-  //           zoom: 15,
-  //           center: test
-  //           });
-  //   let transitLayer = new google.maps.TransitLayer();
-  //   transitLayer.setMap(map);
+  // 地図表示
+  function initMap() {
+    // 投稿された住所の緯度経度を取得
+    let build_position ={lat: <%= @post.latitude %>, lng: <%= @post.longitude %>}
+    let map =new google.maps.Map(document.getElementById("map"), {
+            zoom: 19,
+            center: build_position
+            });
+    let transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
     
-  //   let contentString = "住所:<#%= @post.address %>";
-  //   let inflowindow = new google.maps.InfoWindow({
-  //     content: contentString
-  //   });
+    let contentString = "住所:<%= @post.address %>";
+    let infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
     
-  //   let marker = new google.maps.Marker({
-  //             position:test,
-  //             map: map,
-  //             title: contentString
-  //           });
-  //   marker.addLisrener("click", function(){
-  //     infowindow.open(map, marker);
-  //   });
-  // }
+    let marker = new google.maps.Marker({
+              position: build_position,
+              map: map,
+              title: contentString
+            });
+    marker.addListener("click", function(){
+      infowindow.open(map, marker);
+    });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
+
+
+
+
+<script>
 //評価投稿
   $("#star").raty({
     starOn: "<%= asset_path("star-on.png") %>",
@@ -102,4 +111,3 @@
     readOnly: true
   });
 </script>
- <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
