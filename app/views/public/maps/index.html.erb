@@ -8,7 +8,6 @@
 
 <div id="map"></div>
 
-
 <style>
   #map {
     height: 600px;
@@ -16,52 +15,46 @@
   }
 </style>
 
-<!--gemのgeocoderを利用(非同期)-->
+
 <script>
   let mapInstance
-
+  let marker = [];
+  let infoWindow = [];
+  const build_positions = gon.build_positions;
+  <% byebug %>
   function initMap(){
+     // gemのgeocoderを利用(非同期)
+    geocoder = new google.maps.Geocoder()
     mapInstance = new google.maps.Map(document.getElementById("map"), {
       center: {lat: 35.659, lng: 139.700},
       zoom: 14
     });
+    // 登録住所から緯度経度に変化して、複数のピンを表示
+    for(let i = 0; i < build_positions.length; i++){
+      geocoder.geocode({"address": build_positions[i].prefecture_code + build_positions[i].city + build_positions[i].street},
+      function(results, status) {
+        if(status == "OK"){
+          map.setCenter(results[0].geometry.location);
+          marker[i] = new google.maps.Marker({
+            map: mapInstance,
+            position: results[0].geometry.location
+          });
+
+          let id = build_positions[i]["id"]
+          infoWindow[i] = new google.maps.infoWindow({
+            content: `<a href="/posts/${id}">${build_positions[i].title}</a>`
+          });
+          marker[i].addListener("click", function(){
+            infoWindow[i].open(map, marker[i]);
+          });
+        } else{
+          alert("Geocode was not successful for the following reason: " + status);
+        }
+      });
+    }
   }
 </script>
 
 
 
-
-<!--Google Geocoding APIを利用-->
-<!--<script>-->
-<!--  let map-->
-<!--  let geocoder-->
-
-<!--  function initMap(){-->
-<!--    geocoder = new google.maps.Geocoder()-->
-
-<!--    map = new google.maps.Map(document.getElementById("map"), {-->
-<!--      center: {lat: 40.7828, lng:-73.9653},-->
-<!--      zoom: 12-->
-<!--    });-->
-<!--  }-->
-
-<!--  function codeAddress(){-->
-    <!--// 入力を取得-->
-<!--    let inputAddress = document.getElementById("address").value;-->
-
-<!--    geocoder.geocode( { "address": inputAddress}, function(results, status){-->
-<!--      if(status == "OK"){-->
-<!--        map.setCenterで地図が移動-->
-<!--        map.setCenter(results[0].geometry.location);-->
-
-<!--        const marker = new google.maps.Marker({-->
-<!--          map: map,-->
-<!--          position: results[0].geometry.location-->
-<!--        });-->
-<!--      } else {-->
-<!--        alert("Geocode was not successful for the following reason: " + status)-->
-<!--      }-->
-<!--    })-->
-<!--  }-->
-<!--</script>-->
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>

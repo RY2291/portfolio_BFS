@@ -1,6 +1,7 @@
 class Public::MapsController < ApplicationController
 
   def index
+    gon.build_positions = Post.all.pluck(:latitude, :longitude)
   end
 
   def map
