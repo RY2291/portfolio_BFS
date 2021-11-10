@@ -20856,3 +20856,2083 @@ Processing by Public::PostsController#index as HTML
 Completed 200 OK in 86ms (Views: 84.3ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/maps" for 115.177.69.94 at 2021-11-10 08:39:34 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MapsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "posts"."latitude", "posts"."longitude" FROM "posts"[0m
+  ↳ app/controllers/public/maps_controller.rb:4
+  Rendering public/maps/index.html.erb within layouts/application
+  Rendered public/maps/index.html.erb within layouts/application (27.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 514ms (Views: 486.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/maps" for 115.177.69.94 at 2021-11-10 08:40:42 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MapsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "posts"."latitude", "posts"."longitude" FROM "posts"[0m
+  ↳ app/controllers/public/maps_controller.rb:4
+  Rendering public/maps/index.html.erb within layouts/application
+  Rendered public/maps/index.html.erb within layouts/application (72310.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 72366ms (Views: 72363.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 115.177.69.94 at 2021-11-10 08:42:24 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#new as HTML
+  Rendering public/posts/new.html.erb within layouts/application
+  Rendered public/posts/new.html.erb within layouts/application (19.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 167ms (Views: 141.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/maps" for 115.177.69.94 at 2021-11-10 08:42:27 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MapsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "posts"."latitude", "posts"."longitude" FROM "posts"[0m
+  ↳ app/controllers/public/maps_controller.rb:4
+Started GET "/maps" for 115.177.69.94 at 2021-11-10 08:50:00 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MapsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "posts"."latitude", "posts"."longitude" FROM "posts"[0m
+  Rendering public/maps/index.html.erb within layouts/application
+  ↳ app/controllers/public/maps_controller.rb:4
+  Rendered public/maps/index.html.erb within layouts/application (1.0ms)
+  Rendering public/maps/index.html.erb within layouts/application
+Started GET "/maps" for 115.177.69.94 at 2021-11-10 08:50:10 +0000
+  Rendered public/maps/index.html.erb within layouts/application (0.9ms)
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 9937ms (Views: 103.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 463637ms (Views: 9944.3ms | ActiveRecord: 0.7ms)
+
+
+Processing by Public::MapsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "posts"."latitude", "posts"."longitude" FROM "posts"[0m
+  ↳ app/controllers/public/maps_controller.rb:4
+  Rendering public/maps/index.html.erb within layouts/application
+  Rendered public/maps/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 64ms (Views: 55.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/maps" for 115.177.69.94 at 2021-11-10 08:52:36 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::MapsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "posts"."latitude", "posts"."longitude" FROM "posts"[0m
+  ↳ app/controllers/public/maps_controller.rb:4
+  Rendering public/maps/index.html.erb within layouts/application
+  Rendered public/maps/index.html.erb within layouts/application (421.2ms)
+Completed 500 Internal Server Error in 442ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `byebu' for #<#<Class:0x00000000061e7368>:0x00000000061e4af0>
+Did you mean?  byebug):
+    21:   let marker = [];
+    22:   let infoWindow = [];
+    23:   const build_positions = gon.build_positions;
+    24:   <% byebu %>
+    25:   function initMap(){
+    26:      // gemのgeocoderを利用(非同期)
+    27:     geocoder = new google.maps.Geocoder()
+  
+app/views/public/maps/index.html.erb:24:in `_app_views_public_maps_index_html_erb___2955126648759925415_51283100'
+Started GET "/maps" for 115.177.69.94 at 2021-11-10 08:53:07 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MapsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "posts"."latitude", "posts"."longitude" FROM "posts"[0m
+  ↳ app/controllers/public/maps_controller.rb:4
+  Rendering public/maps/index.html.erb within layouts/application
+  Rendered public/maps/index.html.erb within layouts/application (463578.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 464347ms (Views: 464341.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 115.177.69.94 at 2021-11-10 09:00:59 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 11ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/12" for 115.177.69.94 at 2021-11-10 09:01:06 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 12], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/public/posts/show.html.erb:46
+  Rendered public/posts/show.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 187ms (Views: 123.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/11" for 115.177.69.94 at 2021-11-10 09:01:13 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 11], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/public/posts/show.html.erb:46
+  Rendered public/posts/show.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 98ms (Views: 92.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/15" for 115.177.69.94 at 2021-11-10 09:01:17 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 15], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:46
+  Rendered public/posts/show.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 74ms (Views: 69.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/14" for 115.177.69.94 at 2021-11-10 09:01:21 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 14], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:46
+  Rendered public/posts/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 62ms (Views: 56.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts/14/favorites" for 115.177.69.94 at 2021-11-10 09:04:45 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"OGJfTGcxt2mwWhnCKo6OKXh0w8e2PpMG8o6e+oy+HfajtjW/p+3V5ClD6ipswwafDbnkV8YPzHehQLQ7Ovm3ng==", "post_id"=>"14"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[36mFavorite Create (3.5ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["post_id", 14], ["created_at", "2021-11-10 09:04:45.470839"], ["updated_at", "2021-11-10 09:04:45.470839"]]
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:6
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/14
+Completed 302 Found in 30ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/posts/14" for 115.177.69.94 at 2021-11-10 09:04:45 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 14], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:19
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 163ms (Views: 152.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/posts/14/favorites" for 115.177.69.94 at 2021-11-10 09:04:53 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::FavoritesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9qSWCbfZ88jIb7ItL1SGyurlZQygnIsI85U+yEXECI9tcPz6dwWRRVF2QcVpGQ58nyhCnNCt1HmgWxQJ84Oi5w==", "post_id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:12
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."post_id" = ? LIMIT ?[0m  [["user_id", 3], ["post_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:13
+  [1m[36mFavorite Destroy (0.3ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/public/favorites_controller.rb:13
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:13
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/14
+Completed 302 Found in 21ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/posts/14" for 115.177.69.94 at 2021-11-10 09:04:53 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 14], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 72ms (Views: 67.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/14" for 115.177.69.94 at 2021-11-10 09:05:01 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 14], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/14" for 115.177.69.94 at 2021-11-10 09:05:04 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 14], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 63ms (Views: 57.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 115.177.69.94 at 2021-11-10 09:05:10 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#index as HTML
+  Rendering public/posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/public/posts/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  Rendered public/posts/index.html.erb within layouts/application (28.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 97ms (Views: 94.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/15" for 115.177.69.94 at 2021-11-10 09:05:13 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 15], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 64ms (Views: 58.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/15" for 115.177.69.94 at 2021-11-10 09:05:20 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 15], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 64ms (Views: 59.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 115.177.69.94 at 2021-11-10 09:05:22 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#index as HTML
+  Rendering public/posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/public/posts/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  Rendered public/posts/index.html.erb within layouts/application (26.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 76ms (Views: 74.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/8" for 115.177.69.94 at 2021-11-10 09:05:24 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 8]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 8]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 8], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 8]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 87ms (Views: 82.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/8" for 115.177.69.94 at 2021-11-10 09:05:28 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 8]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 8]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 8], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 8]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 66ms (Views: 61.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/9" for 115.177.69.94 at 2021-11-10 09:05:36 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 9], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/10" for 115.177.69.94 at 2021-11-10 09:05:42 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 10], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 82ms (Views: 76.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/11" for 115.177.69.94 at 2021-11-10 09:05:45 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 11], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 63ms (Views: 58.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12" for 115.177.69.94 at 2021-11-10 09:06:01 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 12], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 66ms (Views: 61.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/14" for 115.177.69.94 at 2021-11-10 09:06:05 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 14], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 63ms (Views: 57.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts/14/favorites" for 115.177.69.94 at 2021-11-10 09:06:06 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"iDBcTbDlmdM71R6rHzLsQU0yfBYrzFq7iIKHdErV67ET5Da+cDn7XqLM7UNZf2T3OP9bhlv9BcrbTK21/JJB2Q==", "post_id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[36mFavorite Create (0.3ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["post_id", 14], ["created_at", "2021-11-10 09:06:06.922954"], ["updated_at", "2021-11-10 09:06:06.922954"]]
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:6
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/14
+Completed 302 Found in 16ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/posts/14" for 115.177.69.94 at 2021-11-10 09:06:07 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 14], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:19
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 83ms (Views: 78.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/posts/14/favorites" for 115.177.69.94 at 2021-11-10 09:06:10 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::FavoritesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Gn3jVOqGf61UoeRnAZr2FUAv4r/czZk4DfbcI/luHRaBqYmnKlodIM24F49H136jNeLFL6z8xkleOPbiTym3fg==", "post_id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:12
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."post_id" = ? LIMIT ?[0m  [["user_id", 3], ["post_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:13
+  [1m[36mFavorite Destroy (0.3ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/public/favorites_controller.rb:13
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:13
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/14
+Completed 302 Found in 15ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/posts/14" for 115.177.69.94 at 2021-11-10 09:06:10 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 14], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 70ms (Views: 65.2ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" BETWEEN ? AND ? LIMIT ?[0m  [["id", 7], ["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mComment Destroy (2.9ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 11]]
+  [1m[36mComment Destroy (0.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 12]]
+  [1m[36mComment Destroy (0.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 13]]
+  [1m[36mComment Destroy (0.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 14]]
+  [1m[36mRate Load (0.1ms)[0m  [1m[34mSELECT "rates".* FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mPost Destroy (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 7]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/posts" for 115.177.69.94 at 2021-11-10 09:07:22 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#index as HTML
+  Rendering public/posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/public/posts/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  Rendered public/posts/index.html.erb within layouts/application (26.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 86ms (Views: 84.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 115.177.69.94 at 2021-11-10 09:07:25 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#index as HTML
+  Rendering public/posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/public/posts/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  Rendered public/posts/index.html.erb within layouts/application (34.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 115ms (Views: 113.6ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[36mRate Load (0.1ms)[0m  [1m[34mSELECT "rates".* FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[36mPostImage Destroy (1.6ms)[0m  [1m[31mDELETE FROM "post_images" WHERE "post_images"."id" = ?[0m  [["id", 4]]
+  [1m[36mPostImage Destroy (0.1ms)[0m  [1m[31mDELETE FROM "post_images" WHERE "post_images"."id" = ?[0m  [["id", 5]]
+  [1m[36mPost Destroy (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 9]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[36mRate Load (0.0ms)[0m  [1m[34mSELECT "rates".* FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[36mPostImage Destroy (1.5ms)[0m  [1m[31mDELETE FROM "post_images" WHERE "post_images"."id" = ?[0m  [["id", 2]]
+  [1m[36mPostImage Destroy (0.1ms)[0m  [1m[31mDELETE FROM "post_images" WHERE "post_images"."id" = ?[0m  [["id", 3]]
+  [1m[36mPost Destroy (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[36mRate Load (0.0ms)[0m  [1m[34mSELECT "rates".* FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[36mPostImage Destroy (1.3ms)[0m  [1m[31mDELETE FROM "post_images" WHERE "post_images"."id" = ?[0m  [["id", 6]]
+  [1m[36mPostImage Destroy (0.1ms)[0m  [1m[31mDELETE FROM "post_images" WHERE "post_images"."id" = ?[0m  [["id", 7]]
+  [1m[36mPost Destroy (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[36mRate Load (0.1ms)[0m  [1m[34mSELECT "rates".* FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[36mPostImage Load (0.0ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[36mPost Destroy (1.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 11]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 12]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 12]]
+  [1m[36mRate Load (0.1ms)[0m  [1m[34mSELECT "rates".* FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 12]]
+  [1m[36mRate Destroy (1.6ms)[0m  [1m[31mDELETE FROM "rates" WHERE "rates"."id" = ?[0m  [["id", 2]]
+  [1m[36mRate Destroy (0.1ms)[0m  [1m[31mDELETE FROM "rates" WHERE "rates"."id" = ?[0m  [["id", 3]]
+  [1m[36mRate Destroy (0.1ms)[0m  [1m[31mDELETE FROM "rates" WHERE "rates"."id" = ?[0m  [["id", 4]]
+  [1m[36mRate Destroy (0.1ms)[0m  [1m[31mDELETE FROM "rates" WHERE "rates"."id" = ?[0m  [["id", 5]]
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 12]]
+  [1m[36mPost Destroy (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 115.177.69.94 at 2021-11-10 09:09:57 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 18ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 115.177.69.94 at 2021-11-10 09:09:59 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (26.1ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 115.177.69.94 at 2021-11-10 09:10:10 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#index as HTML
+  Rendering public/posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/public/posts/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  Rendered public/posts/index.html.erb within layouts/application (546.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 829ms (Views: 813.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/13" for 115.177.69.94 at 2021-11-10 09:10:14 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 13]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 13]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 13], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 13]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 13]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 172ms (Views: 145.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/14" for 115.177.69.94 at 2021-11-10 09:10:17 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 14], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 117ms (Views: 108.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/15" for 115.177.69.94 at 2021-11-10 09:10:20 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 15], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 166ms (Views: 157.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/14" for 115.177.69.94 at 2021-11-10 09:10:23 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 14], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 86ms (Views: 79.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/13" for 115.177.69.94 at 2021-11-10 09:10:26 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 13]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 13]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 13], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 13]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 13]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 83ms (Views: 77.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 115.177.69.94 at 2021-11-10 09:10:33 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#index as HTML
+  Rendering public/posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/public/posts/index.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  Rendered public/posts/index.html.erb within layouts/application (13.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 78ms (Views: 76.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 115.177.69.94 at 2021-11-10 09:10:36 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#new as HTML
+  Rendering public/posts/new.html.erb within layouts/application
+  Rendered public/posts/new.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 78ms (Views: 73.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for 115.177.69.94 at 2021-11-10 09:10:53 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XX568PN6wSoA/QRw74AKlzrGuSEX7sR3zjWmhKgF52Tm2bktrWE7lvzN2+m6HO/o7VVOKvc+df/ygzEQez5eqA==", "post"=>{"title"=>"住所なし", "introduction"=>"", "address"=>"", "post_images_images"=>["[]"]}, "commit"=>"投稿をする"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/posts_controller.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:11
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "introduction", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["title", "住所なし"], ["introduction", ""], ["address", ""], ["created_at", "2021-11-10 09:10:53.136013"], ["updated_at", "2021-11-10 09:10:53.136013"]]
+  ↳ app/controllers/public/posts_controller.rb:11
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/posts_controller.rb:11
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts
+Completed 302 Found in 20ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/posts" for 115.177.69.94 at 2021-11-10 09:10:53 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#index as HTML
+  Rendering public/posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/public/posts/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  Rendered public/posts/index.html.erb within layouts/application (16.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 76ms (Views: 74.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/16" for 115.177.69.94 at 2021-11-10 09:10:56 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 16]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 16]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 16], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 16]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 16]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/15" for 115.177.69.94 at 2021-11-10 09:11:09 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 15], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 72ms (Views: 67.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 115.177.69.94 at 2021-11-10 09:11:20 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#new as HTML
+  Rendering public/posts/new.html.erb within layouts/application
+  Rendered public/posts/new.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for 115.177.69.94 at 2021-11-10 09:12:33 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U04BxttEBs6OoxSA/Uh4TWCecWhFPlxZW+5O8WVDwV7o6cIbhV/8cnKTyxmo1J0ytw2GY6Xu7dFnWNlltnh4kg==", "post"=>{"title"=>"住所あり", "introduction"=>"住所：数字全角", "address"=>"東京都千代田区神田美土代町１−１", "post_images_images"=>["[]"]}, "commit"=>"投稿をする"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/posts_controller.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:11
+  [1m[36mPost Create (6.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "introduction", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["title", "住所あり"], ["introduction", "住所：数字全角"], ["address", "東京都千代田区神田美土代町１−１"], ["latitude", 35.6927494], ["longitude", 139.765364], ["created_at", "2021-11-10 09:12:34.176531"], ["updated_at", "2021-11-10 09:12:34.176531"]]
+  ↳ app/controllers/public/posts_controller.rb:11
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/posts_controller.rb:11
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts
+Completed 302 Found in 400ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/posts" for 115.177.69.94 at 2021-11-10 09:12:34 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#index as HTML
+  Rendering public/posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/public/posts/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  Rendered public/posts/index.html.erb within layouts/application (16.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/17" for 115.177.69.94 at 2021-11-10 09:12:36 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 17], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/16" for 115.177.69.94 at 2021-11-10 09:13:14 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 16]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 16]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 16], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 16]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 16]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 92ms (Views: 85.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/15" for 115.177.69.94 at 2021-11-10 09:13:16 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 15], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 15]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 82ms (Views: 77.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/17" for 115.177.69.94 at 2021-11-10 09:13:20 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 17], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 74ms (Views: 69.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 115.177.69.94 at 2021-11-10 09:14:48 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#new as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/post.rb:20:in `<class:Post>'
+app/models/post.rb:1:in `<main>'
+app/controllers/public/posts_controller.rb:4:in `new'
+Started GET "/posts/new" for 115.177.69.94 at 2021-11-10 09:15:03 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#new as HTML
+  Rendering public/posts/new.html.erb within layouts/application
+  Rendered public/posts/new.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 167ms (Views: 140.8ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/posts" for 115.177.69.94 at 2021-11-10 09:15:06 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LvXUdcR3QOCLki2d1rNz2FfUukA8eNmmWfsnrWgpWw+1Ib6GBKsibRKL3nWQ/vtuIhmd0ExJhtcKNQ1s3m7xZw==", "post"=>{"title"=>"", "introduction"=>"", "address"=>"", "post_images_images"=>["[]"]}, "commit"=>"投稿をする"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/posts_controller.rb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/posts_controller.rb:11
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/new
+Completed 302 Found in 176ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 115.177.69.94 at 2021-11-10 09:15:06 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#new as HTML
+  Rendering public/posts/new.html.erb within layouts/application
+  Rendered public/posts/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for 115.177.69.94 at 2021-11-10 09:15:08 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UEsH3b60KnLxrhrZM1NK5a6ETKAvSXXJjMj2b0LGjo/Ln20ufmhI/2i36TF1HsJT20lrMF94KrjfBtyu9IEk5w==", "post"=>{"title"=>"", "introduction"=>"", "address"=>"", "post_images_images"=>["[]"]}, "commit"=>"投稿をする"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/posts_controller.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/posts_controller.rb:11
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/new
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 115.177.69.94 at 2021-11-10 09:15:08 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#new as HTML
+  Rendering public/posts/new.html.erb within layouts/application
+  Rendered public/posts/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 75ms (Views: 74.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 115.177.69.94 at 2021-11-10 09:15:34 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#index as HTML
+  Rendering public/posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/public/posts/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  Rendered public/posts/index.html.erb within layouts/application (25.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 99ms (Views: 97.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/17" for 115.177.69.94 at 2021-11-10 09:15:38 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 17], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 102ms (Views: 76.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/rate?post_id=17" for 115.177.69.94 at 2021-11-10 09:15:42 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7eHmxkDu1Kk0GQ0fpr5qfc2146fSobO2T3sq6cACcT24/MPDv93IrIP7rS56DBkbmeEEumEdaizVxdsub+Vetw==", "post"=>{"rate"=>"score"}, "rate"=>{"rate"=>"2.5"}, "commit"=>"評価する", "post_id"=>"17"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/rates_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/rates_controller.rb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/rates_controller.rb:6
+  [1m[36mRate Create (0.8ms)[0m  [1m[32mINSERT INTO "rates" ("post_id", "user_id", "rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 17], ["user_id", 3], ["rate", 2.5], ["created_at", "2021-11-10 09:15:42.741332"], ["updated_at", "2021-11-10 09:15:42.741332"]]
+  ↳ app/controllers/public/rates_controller.rb:6
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/rates_controller.rb:6
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/17
+Completed 302 Found in 19ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/posts/17" for 115.177.69.94 at 2021-11-10 09:15:42 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 17], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 104ms (Views: 99.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/17" for 115.177.69.94 at 2021-11-10 09:15:50 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 17], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 154ms (Views: 148.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/17" for 115.177.69.94 at 2021-11-10 09:15:53 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 17], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 75ms (Views: 70.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/17" for 115.177.69.94 at 2021-11-10 09:15:54 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 17], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 91ms (Views: 86.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/17" for 115.177.69.94 at 2021-11-10 09:15:55 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 17], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 87ms (Views: 79.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts/17/favorites" for 115.177.69.94 at 2021-11-10 09:16:25 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"gj7VdxNeFU7PhirTFnkQWJv0eYCbaI/TaKbkTdmDdukZ6r+E04J3w1af2TtQNJju7jleEOtZ0KI7aM6Mb8TcgQ==", "post_id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[36mFavorite Create (0.9ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["post_id", 17], ["created_at", "2021-11-10 09:16:25.483775"], ["updated_at", "2021-11-10 09:16:25.483775"]]
+  ↳ app/controllers/public/favorites_controller.rb:6
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:6
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/17
+Completed 302 Found in 23ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/posts/17" for 115.177.69.94 at 2021-11-10 09:16:25 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 17], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:19
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 71ms (Views: 66.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/posts/17/favorites" for 115.177.69.94 at 2021-11-10 09:16:28 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::FavoritesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jxJ16Iw0ee7V6iEEoDwrKkoFU8IFYQCneG4L189WByIUxh8bTOgbY0zz0uzmcaOcP8h0UnVQX9YroCEWeRGtSg==", "post_id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:12
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."post_id" = ? LIMIT ?[0m  [["user_id", 3], ["post_id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/favorites_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:13
+  [1m[36mFavorite Destroy (1.0ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/public/favorites_controller.rb:13
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/favorites_controller.rb:13
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/17
+Completed 302 Found in 18ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/posts/17" for 115.177.69.94 at 2021-11-10 09:16:29 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/posts_controller.rb:26
+  Rendering public/posts/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images" WHERE "post_images"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("rates"."rate") FROM "rates" WHERE "rates"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/show.html.erb:12
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."post_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["post_id", 17], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:23
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  ↳ app/views/public/posts/show.html.erb:45
+  Rendered public/posts/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 115.177.69.94 at 2021-11-10 09:16:51 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::PostsController#index as HTML
+  Rendering public/posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/public/posts/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/posts/index.html.erb:16
+  Rendered public/posts/index.html.erb within layouts/application (15.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 76ms (Views: 74.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/sign_in" for 115.177.69.94 at 2021-11-10 09:18:01 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (0.9ms)
+  Rendered admin/sessions/new.html.erb within layouts/application (11.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 105ms (Views: 94.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/sign_in" for 115.177.69.94 at 2021-11-10 09:18:53 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (0.8ms)
+  Rendered admin/sessions/new.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/sign_in" for 115.177.69.94 at 2021-11-10 09:19:00 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (0.7ms)
+  Rendered admin/sessions/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/sign_in" for 115.177.69.94 at 2021-11-10 09:19:25 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/user/3
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/user/3" for 115.177.69.94 at 2021-11-10 09:19:25 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::UserController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/user_controller.rb:4
+  Rendering public/user/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/user/show.html.erb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 3]]
+  ↳ app/views/public/user/show.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  ↳ app/views/public/user/show.html.erb:17
+  Rendered public/user/show.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/user/sign_out" for 115.177.69.94 at 2021-11-10 09:19:29 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yh1hNsD7zDm19BnAy9yV0vDGEutoVZJDvofhrbDbBb5RyQvFACeutCzt6iiNkR1khQs1exhkzTLtSctsBpyv1g=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/building_facade_share
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/building_facade_share" for 115.177.69.94 at 2021-11-10 09:19:30 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/ajax-loader.gif" for 115.177.69.94 at 2021-11-10 09:19:30 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/ajax-loader.gif"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/fonts/slick.woff" for 115.177.69.94 at 2021-11-10 09:19:30 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/slick.woff"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/fonts/slick.ttf" for 115.177.69.94 at 2021-11-10 09:19:32 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/slick.ttf"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user/sign_in" for 115.177.69.94 at 2021-11-10 09:19:55 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/assets/image_1.jpg" for 115.177.69.94 at 2021-11-10 09:19:56 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+Started GET "/user/assets/test5.jpg" for 115.177.69.94 at 2021-11-10 09:19:56 +0000
+ActionController::RoutingError (No route matches [GET] "/user/assets/image_1.jpg"):
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/user/assets/test5.jpg"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/sign_in" for 115.177.69.94 at 2021-11-10 09:20:51 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (0.8ms)
+  Rendered admin/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/sign_in" for 115.177.69.94 at 2021-11-10 09:20:55 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (0.8ms)
+  Rendered admin/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/sign_in" for 115.177.69.94 at 2021-11-10 09:21:09 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (0.8ms)
+  Rendered admin/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/sign_in" for 115.177.69.94 at 2021-11-10 09:21:14 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (0.8ms)
+  Rendered admin/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/sign_in" for 115.177.69.94 at 2021-11-10 09:21:16 +0000
+Cannot render console from 115.177.69.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hs+VKUQJH3MgmqSv0/YQkGILlORx7c9VLCFeo5IccQ6mL2veXu/CctjzH5J0kV42S1pR9JS2sw+V7JHPlOqx3A==", "admin"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Admin::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hs+VKUQJH3MgmqSv0/YQkGILlORx7c9VLCFeo5IccQ6mL2veXu/CctjzH5J0kV42S1pR9JS2sw+V7JHPlOqx3A==", "admin"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (0.7ms)
+  Rendered admin/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
