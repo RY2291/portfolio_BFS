@@ -13,7 +13,7 @@
   <%= link_to "投稿を編集", edit_post_path(@post) %>
 <% end %>
   <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"} %>
-  
+
   <!---いいね(非同期通信)--->
 <div id="favorites_button_<%= @post.id %>">
  <%= render partial: "public/favorites/favorite", locals: {post: @post } %>
@@ -27,9 +27,9 @@
     </div>
     <%= f.submit "評価する" %>
   <% end %>
-  
+
   <!--コメント送信フォーム(非同期通信)-->
-  
+
 
   <h2>コメント一覧</h2>
   <div class="comment_create">
@@ -53,7 +53,7 @@
   }
 </style>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap"></script>
 <script>
   // 地図表示
   function initMap() {

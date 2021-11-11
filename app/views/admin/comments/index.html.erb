@@ -1,0 +1,22 @@
+<table class='table table-hover table-inverse'>
+  <thead>
+   <tr>
+    <th>コメントID</th>
+    <th>コメント内容</th>
+    <th>投稿日時</th>
+    <th>投稿者</th>
+    <th></th>
+   </tr>
+  </thead>
+  <tbody>
+   <% @comments.each do |comment| %>
+    <tr>
+      <td><%= comment.id %></td>
+      <td><%= comment.comment %></td>
+      <td><%= comment.created_at %></td>
+      <td><%= link_to post.user.name, user_path(post.user_id) %></td>
+      <td><%= link_to "コメントを削除する", admin_comment(comment.id) %></td>
+    </tr>
+   <% end %>
+  </tbody>
+</table>
