@@ -4,7 +4,7 @@
     <title>BFS</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= include_gon %>
+    <%= Gon::Base.render_data %>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -98,6 +98,7 @@
          ©  test
       </div>
     </footer>
+
   </body>
 </html>
 

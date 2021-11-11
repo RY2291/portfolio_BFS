@@ -13,16 +13,11 @@
   <%= link_to "投稿を編集", edit_post_path(@post) %>
 <% end %>
   <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"} %>
-
-   <% if @post.favorited_by?(current_user) %>
-    <%= link_to  post_favorites_path(@post), method: :delete do %>
-      <i class="fas fa-heart"></i><%= @post.favorites.count%>
-    <% end %>
-  <% else %>
-    <%= link_to  post_favorites_path(@post), method: :post do %>
-      <i class="far fa-heart"></i><%= @post.favorites.count%>
-    <% end %>
-  <% end %>
+  
+  <!---いいね(非同期通信)--->
+<div id="favorites_button_<%= @post.id %>">
+ <%= render partial: "public/favorites/favorite", locals: {post: @post } %>
+</div>
 
 
   <!--コメント送信フォーム-->
@@ -58,27 +53,26 @@
   }
 </style>
 
-
-
+<script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap"></script>
 <script>
   // 地図表示
   function initMap() {
     // 投稿された住所の緯度経度を取得
-    let build_position ={lat: <%= @post.latitude %>, lng: <%= @post.longitude %>}
-    let map =new google.maps.Map(document.getElementById("map"), {
+    let buildPosition = {lat: <%= @post.latitude %>, lng: <%= @post.longitude %>}
+    let map = new google.maps.Map(document.getElementById("map"), {
             zoom: 19,
-            center: build_position
+            center: buildPosition
             });
     let transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
-    
+
     let contentString = "住所:<%= @post.address %>";
     let infowindow = new google.maps.InfoWindow({
       content: contentString
     });
-    
+
     let marker = new google.maps.Marker({
-              position: build_position,
+              position: buildPosition,
               map: map,
               title: contentString
             });
@@ -86,7 +80,7 @@
       infowindow.open(map, marker);
     });
   }
-  
+
   //評価投稿
   $("#star").raty({
     starOn: "<%= asset_path("star-on.png") %>",
@@ -105,9 +99,9 @@
     },
     readOnly: true
   });
-  
+
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
+
 
 
 
