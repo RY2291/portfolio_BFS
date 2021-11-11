@@ -2,12 +2,11 @@ class Public::PostsController < ApplicationController
 
   def new
     @post = Post.new
-    gon.post = @post
   end
 
   def create
     @post = Post.new(post_params)
-    @post.user_id = current_user.id
+    @post.user_id =urrent_user.id
     if @post.save
       flash[:notice] = "投稿が完了しました！"
       redirect_to posts_path

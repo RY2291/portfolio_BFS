@@ -4,7 +4,7 @@
     <title>BFS</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= include_gon %>
+    <%= Gon::Base.render_data %>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -45,6 +45,25 @@
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
           </div>
+        <!--管理者用　ヘッダー-->
+        <% elsif admin_signed_in? %>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <%= link_to "ログイン", new_user_session_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "投稿一覧", posts_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "コメント一覧", new_user_session_path, class: "nav-link" %>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
         <!--フリーアクセス　ヘッダー-->
         <% else %>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -79,6 +98,7 @@
          ©  test
       </div>
     </footer>
+
   </body>
 </html>
 

@@ -11,50 +11,46 @@
 <style>
   #map {
     height: 600px;
-    width: 100;
+    width: 100%;
   }
 </style>
 
-
 <script>
-  let mapInstance
-  let marker = [];
+  let map
   let infoWindow = [];
+  let marker = [];
+  let markerLatLng = {};
   const build_positions = gon.build_positions;
-  <% byebug %>
-  function initMap(){
-     // gemのgeocoderを利用(非同期)
-    geocoder = new google.maps.Geocoder()
-    mapInstance = new google.maps.Map(document.getElementById("map"), {
-      center: {lat: 35.659, lng: 139.700},
-      zoom: 14
-    });
-    // 登録住所から緯度経度に変化して、複数のピンを表示
-    for(let i = 0; i < build_positions.length; i++){
-      geocoder.geocode({"address": build_positions[i].prefecture_code + build_positions[i].city + build_positions[i].street},
-      function(results, status) {
-        if(status == "OK"){
-          map.setCenter(results[0].geometry.location);
-          marker[i] = new google.maps.Marker({
-            map: mapInstance,
-            position: results[0].geometry.location
-          });
-
-          let id = build_positions[i]["id"]
-          infoWindow[i] = new google.maps.infoWindow({
-            content: `<a href="/posts/${id}">${build_positions[i].title}</a>`
-          });
-          marker[i].addListener("click", function(){
-            infoWindow[i].open(map, marker[i]);
-          });
-        } else{
-          alert("Geocode was not successful for the following reason: " + status);
-        }
+  let contentString = "住所:";
+ // 地図表示
+  function initMap() {
+    // 投稿された住所の緯度経度を取得
+    map =new google.maps.Map(document.getElementById("map"), {
+            zoom: 12,
+            center: { lat: 35.6585, lng: 139.7486 }
+            });
+    // 都市の交通網表示
+    let transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
+// 地図に複数マーカ表示
+    for (var i = 0; i < build_positions.length; i++) {
+      if (build_positions.length == 0) { continue };
+      markerLatLng = {lat: build_positions[i][0], lng: build_positions[i][1]}; // 緯度経度のデータ作成
+      marker[i] = new google.maps.Marker({
+        position: markerLatLng,
+        map: map,
+        title: contentString
       });
-    }
-  }
+      // 吹き出し
+      infoWindow[i] = new google.maps.InfoWindow({
+        content: contentString
+      });
+      // マーカがクリックされたとき
+      marker[i].addListener("click", function(){
+        infoWindow[i].open(map, marker[i]);
+      });
+  };
+  };
 </script>
-
-
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>

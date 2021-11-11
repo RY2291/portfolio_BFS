@@ -4,7 +4,7 @@ class Public::RatesController < ApplicationController
     rate = current_user.rates.new(rate_params)
     rate.post_id = params[:post_id]
     rate.save
-    redirect_back(fallback_location: top_path)
+    redirect_to post_path(params[:post_id])
   end
   
   
