@@ -1,12 +1,12 @@
 class Public::CommentsController < ApplicationController
 
   def create
-    post = Post.find(params[:id])
+    post = Post.find(params[:post_id])
+    @comments = post.comments.order(created_at: :desc)
     comment = current_user.comments.new(comment_params)
     comment.post_id = post.id
     if comment.save
       flash[:notice] = "コメントが完了しました！"
-      redirect_to post_path(post.id)
     else
       flash[:notice] = "コメントに失敗しました"
       redirect_back(fallback_location: top_path)
@@ -14,9 +14,10 @@ class Public::CommentsController < ApplicationController
   end
 
   def destroy
+    post = Post.find(params[:post_id])
+    @comments = post.comments.order(created_at: :desc)
     Comment.find_by(id: params[:id]).destroy
     flash[:notice] = "コメントを削除しました"
-    redirect_back(fallback_location: top_path)
   end
 
 

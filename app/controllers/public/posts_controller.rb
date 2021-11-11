@@ -6,7 +6,7 @@ class Public::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.user_id =urrent_user.id
+    @post.user_id =　urrent_user.id
     if @post.save
       flash[:notice] = "投稿が完了しました！"
       redirect_to posts_path
@@ -24,6 +24,8 @@ class Public::PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = @post.user
     @comment = Comment.new
+    # 新しい順取得
+    @comments = @post.comments.order(created_at: :desc)
     @rate = Rate.new
   end
 

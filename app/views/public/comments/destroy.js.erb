@@ -1,0 +1,3 @@
+$("#comment_area").html("<%= j (render partial: "public/comments/comment_index", locals: { comments: @comments }) %>");
+$("textarea").val("")
+alert("コメントを削除しました")

@@ -20,12 +20,6 @@
 </div>
 
 
-  <!--コメント送信フォーム-->
-  <%= form_with(model:[@post, @comment], local:true) do |f| %>
-    <%= f.text_area :comment, placeholder: "感想などをコメントしてみましょう！" %>
-    <%= f.submit "コメントする" %>
-  <% end %>
-
   <!--評価送信フォーム-->
   <%= form_with(model:[@rate,@post], url: rate_path(post_id: @post), method: :post, local: true) do |f| %>
     <div id="star">
@@ -33,15 +27,21 @@
     </div>
     <%= f.submit "評価する" %>
   <% end %>
+  
+  <!--コメント送信フォーム(非同期通信)-->
+  
 
+  <h2>コメント一覧</h2>
+  <div class="comment_create">
+    <% if user_signed_in? %>
+      <%= render partial: "public/comments/comment_form", locals: { post: @post, comment: @comment } %>
+    <% end %>
+    <!--コメントを表示-->
+    <div id="comment_area">
+      <%= render partial: "public/comments/comment_index", locals: { comments: @comments } %>
+    </div>
+  </div>
 
-<!--コメントを表示-->
-
-  <% @post.comments.each do |comment| %>
-    <%= comment.user.name %>
-    <%= %>
-    <%= comment.comment %>
-  <% end %>
 
 <!--地図表示-->
 <div id="map"></div>
