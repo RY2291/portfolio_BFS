@@ -14,19 +14,20 @@
     width: 100%;
   }
 </style>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" ></script>
 
 <script>
   let map
-  let infoWindow = [];
-  let marker = [];
+  let infowindow = [];
   let markerLatLng = {};
   const build_positions = gon.build_positions;
   let contentString = "住所:";
+  let marker = [];
  // 地図表示
   function initMap() {
     // 投稿された住所の緯度経度を取得
     map =new google.maps.Map(document.getElementById("map"), {
-            zoom: 12,
+            zoom: 14,
             center: { lat: 35.6585, lng: 139.7486 }
             });
     // 都市の交通網表示
@@ -42,15 +43,18 @@
         title: contentString
       });
       // 吹き出し
-      infoWindow[i] = new google.maps.InfoWindow({
+     infowindow[i] = new google.maps.InfoWindow({
         content: contentString
       });
-      // マーカがクリックされたとき
-      marker[i].addListener("click", function(){
-        infoWindow[i].open(map, marker[i]);
-      });
-  };
+
+      markerEvent(i);
+  }
+  }
+  // マーカークリック時に吹き出しを表示する
+  function markerEvent(i) {
+    marker[i].addListener('click', function() {
+      infowindow[i].open(map, marker[i]);
+    });
   };
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>
