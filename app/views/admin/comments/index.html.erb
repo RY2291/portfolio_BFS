@@ -14,8 +14,8 @@
       <td><%= comment.id %></td>
       <td><%= comment.comment %></td>
       <td><%= comment.created_at %></td>
-      <td><%= link_to post.user.name, user_path(post.user_id) %></td>
-      <td><%= link_to "コメントを削除する", admin_comment(comment.id) %></td>
+      <td><%= link_to comment.user.name, admin_user_path(comment.user_id) %></td>
+      <td><%= link_to "コメントを削除する", admin_comment_path(comment.id) %></td>
     </tr>
    <% end %>
   </tbody>

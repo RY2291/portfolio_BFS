@@ -17,7 +17,6 @@ class User < ApplicationRecord
   has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
   has_many :followers, through: :passive_relationships, source: :following
 
-
   def follow(user_id, following_id)
     Relationship.create!(followed_id: user_id, following_id: following_id)
   end
@@ -27,8 +26,10 @@ class User < ApplicationRecord
   end
 
   def following?(user)
-    #byebug
     followings.include?(user)
   end
-
+  
+  def active_for_authentication?
+    super && (self.is_deleted == false)
+  end
 end
