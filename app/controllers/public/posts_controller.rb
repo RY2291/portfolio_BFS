@@ -1,4 +1,6 @@
 class Public::PostsController < ApplicationController
+  
+　before_action :authenticate_user!,only: [:edit]
 
   def new
     @post = Post.new
@@ -6,7 +8,7 @@ class Public::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.user_id =　urrent_user.id
+    @post.user_id = current_user.id
     if @post.save
       flash[:notice] = "投稿が完了しました！"
       redirect_to posts_path
