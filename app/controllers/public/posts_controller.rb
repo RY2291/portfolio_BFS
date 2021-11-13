@@ -1,7 +1,4 @@
 class Public::PostsController < ApplicationController
-  
-　before_action :authenticate_user!,only: [:edit]
-
   def new
     @post = Post.new
   end
