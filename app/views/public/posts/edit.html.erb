@@ -2,7 +2,8 @@
   <h1 class="form-title">投稿編集</h1>
   <div class="row">
     <div class="col-md-6 col-md-offset-3 form-wrapper">
-      <%= form_with model: @post, local:true o |f| %>
+      <%= form_with model: @post, local:true do |f| %>
+        <%= render "layouts/error_message", model: f.object %>
         <div class="form-group">
           <%= f.label :title, "タイトル", autofocus: ""  %>
           <%= f.text_field :title, class: "form-control" %>

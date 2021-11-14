@@ -7,6 +7,8 @@
     </div>
   </div>
 </div>
+<%= flash[:notice] %>
+
 <!--評価を平均点て表示-->
 <div class="review-rating" id="star-read" data-score="<%= @post.rates.average(:rate) %>">評価</div>
 <% if @user == current_user %>
@@ -29,8 +31,6 @@
   <% end %>
 
   <!--コメント送信フォーム(非同期通信)-->
-
-
   <h2>コメント一覧</h2>
   <div class="comment_create">
     <% if user_signed_in? %>

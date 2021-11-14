@@ -15,7 +15,10 @@ class Post < ApplicationRecord
   after_validation :geocode, if: :address_changed?
 
 
-  validates :address, presence:true
+  validates :address, presence: true
+  validates :title, presence: true
+  validates :introduction, presence: true, length: { minimum: 5}
+  
 
 
 
