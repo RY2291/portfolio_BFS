@@ -15,9 +15,8 @@
           <%= f.text_field :address, placeholder: "東京都港区元赤坂2-1-1" %>
         </div>
         <div class="form-group">
-           <!--登録されているジャンルから３つ選択できるフォームor
-          タグを生成してリンク化-->
-          <!--<#%= %>-->
+          <%= f.label :tag_name, "タグ" %>
+          <%= f.text_field :tag_name %>
         </div>
         <div class="form-group">
           <%= f.label :post_images_images, "写真" %>
