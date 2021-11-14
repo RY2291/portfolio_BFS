@@ -1,4 +1,7 @@
 class Public::PostsController < ApplicationController
+  
+  before_action :ensure_correct_user, { only: [:create, :edit, :update, :destroy] }
+  
   def new
     @post = Post.new
   end
@@ -65,6 +68,12 @@ class Public::PostsController < ApplicationController
     #フォームが未完成のため、フォームを追加次第カラムを追加
     # [ ]は複数画像idのため必要
     params.require(:post).permit(:title, :introduction, :address, :post_image, post_images_images: [])
+  end
+  
+  def ensure_correct_user
+    raireturn unless user_signed_in? && current_user
+
+    redirect_to posts_path
   end
 
 end
