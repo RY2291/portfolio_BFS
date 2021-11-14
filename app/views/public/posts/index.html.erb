@@ -1,7 +1,7 @@
 <h3>タグリスト</h3>
 <% if @tag.exists? %>
     <% @tag.each do |tag| %>
-      <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id) %>
+      <%= link_to "# #{tag.tag_name}", tag_posts_path(tag_id: tag.id) %>
       <%= tag.posts.count %>
     <% end %>
 <% end %>

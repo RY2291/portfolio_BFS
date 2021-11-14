@@ -2,19 +2,22 @@
   <h1 class="form-title">投稿編集</h1>
   <div class="row">
     <div class="col-md-6 col-md-offset-3 form-wrapper">
-      <%= form_with model: @post, local:true do |f| %>
-        <div class="form-group">
-          <!--<#%= attachment_image_tag @post, :profile_image, format: "jpg", size: "100x100", fallback: "no_image-.jpg" %>-->
-          <!--<#%= f.label :profile_image, "プロフィール画像"%>-->
-          <!--<"%= f.attachment_field :profile_image %>-->
-        </div>
+      <%= form_with model: @post, local:true o |f| %>
         <div class="form-group">
           <%= f.label :title, "タイトル", autofocus: ""  %>
-          <%= f.text_field :name, class: "form-control" %>
+          <%= f.text_field :title, class: "form-control" %>
         </div>
         <div class="form-group">
           <%= f.label :introduction, "紹介文" %>
           <%= f.text_area :introduction, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :tag, "タグ" %>
+          <% @tag_name = "" %>
+          <% @post.tags.each do |tag| %>
+            <% @tag_name += tag.tag_name + " " %>
+          <% end %>
+          <%= f.text_field :tag_name, value: @tag_name, class: "form-control" %>
         </div>
         <div class="form-group">
           <%= f.label :address, "住所" %>
