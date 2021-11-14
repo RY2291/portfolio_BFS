@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    models:
+      post: 投稿
+      user: 利用者
+      comment: コメント
+    attributes:
+      post:
+        title: タイトル
+        address: 住所
+        introduction: 紹介文
+      user:
+        name: ニックネーム
+        emai: メールアドレス
+      comment:
+        comment: コメント
