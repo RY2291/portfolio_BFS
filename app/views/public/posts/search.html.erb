@@ -1,0 +1,9 @@
+<!--<% @tags.each do |tag| %>-->
+<!--  <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id) %>-->
+<!--  <%= tag.posts.count %>-->
+<!--<% end %>-->
+
+
+<% @posts.each do |post| %>
+  <%= link_to post.title, post_path(post.id) %>
+<% end %>

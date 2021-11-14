@@ -42,6 +42,10 @@
     </div>
   </div>
 
+  <h2>タグ</h2>
+  <% @post_tags.each do |tag| %>
+    <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id) %>
+  <% end %>
 
 <!--地図表示-->
 <div id="map"></div>

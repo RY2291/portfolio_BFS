@@ -24,14 +24,17 @@ Rails.application.routes.draw do
       resource :relationships, only: [:create, :destroy]
       get "follow" => "relationships#follow", as: "follow"
     end
-   patch "user/:id/withdraw" => "user#withdraw", as: "user_withdraw"
-   get "maps/index"
-   get "/map_request", to: "maps#map", as: "map_request"
-   post "/rate" => "rates#create"
-   resources :maps, only: [:index]
+    patch "user/:id/withdraw" => "user#withdraw", as: "user_withdraw"
+    get "maps/index"
+    get "/map_request", to: "maps#map", as: "map_request"
+    post "/rate" => "rates#create"
+    resources :maps, only: [:index]
     resources :posts do
-     resources :comments, only: [:create, :destroy]
-     resource :favorites, only: [:create, :destroy]
+      resources :comments, only: [:create, :destroy]
+      resource :favorites, only: [:create, :destroy]
+    end
+    resources :tag do
+      get "posts" => "posts#search"
     end
   end
 
