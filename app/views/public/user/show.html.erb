@@ -1,7 +1,9 @@
 <h1>mypage</h1>
 <%= flash[:notice]  %>
-<%= link_to "マイページ編集", edit_user_path(@user.id) %>
 
+<% if user_signed_in? && current_user %>
+  <%= link_to "マイページ編集", edit_user_path(@user.id) %>
+<% end %>
 
 <% if user_signed_in? %>
   <% if @user != current_user %>

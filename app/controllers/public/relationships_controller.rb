@@ -1,5 +1,5 @@
 class Public::RelationshipsController < ApplicationController
-
+before_action :authenticate_user!
   def create
     #引数にフォローするuser_idと誰がフォローするかをUserモデルのfollow関数へ
     current_user.follow(params[:user_id], current_user.id)

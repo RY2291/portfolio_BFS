@@ -1,5 +1,5 @@
 class Public::CommentsController < ApplicationController
-
+before_action :authenticate_user!
   def create
     post = Post.find(params[:post_id])
     @comments = post.comments.order(created_at: :desc)
