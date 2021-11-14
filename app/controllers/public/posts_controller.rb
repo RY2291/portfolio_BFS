@@ -12,8 +12,7 @@ class Public::PostsController < ApplicationController
       flash[:notice] = "投稿が完了しました！"
       redirect_to posts_path
     else
-      flash[:notice] = "投稿に失敗しました"
-      redirect_back(fallback_location: top_path)
+      render :new
     end
   end
 
@@ -41,9 +40,12 @@ class Public::PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     tag_list = params[:post][:tag_name].split(nil)
-    @post.update(post_params)
-    @post.save_tag(tag_list)
-    redirect_to post_path(@post.id)
+    if @post.update(post_params)
+       @post.save_tag(tag_list)
+       redirect_to post_path(@post.id)
+    else
+      render :edit
+    end
   end
 
   def destroy

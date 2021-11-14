@@ -8,7 +8,7 @@ class Public::CommentsController < ApplicationController
     if comment.save
       flash[:notice] = "コメントが完了しました！"
     else
-      flash[:notice] = "コメントに失敗しました"
+      flash[:notice] = "コメントに失敗しました。１文字以上入力してください"
       redirect_back(fallback_location: top_path)
     end
   end
