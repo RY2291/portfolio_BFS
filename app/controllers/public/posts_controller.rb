@@ -20,7 +20,7 @@ class Public::PostsController < ApplicationController
   def index
     @posts = Post.all
     @tag = Tag.all
-    
+
   end
 
   def show
@@ -35,11 +35,14 @@ class Public::PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @post_tag = @post.tags
   end
 
   def update
     @post = Post.find(params[:id])
+    tag_list = params[:post][:tag_name].split(nil)
     @post.update(post_params)
+    @post.save_tag(tag_list)
     redirect_to post_path(@post.id)
   end
 
@@ -48,7 +51,7 @@ class Public::PostsController < ApplicationController
     post.destroy
     redirect_to user_path(current_user)
   end
-  
+
   def search
     @tags = Tag.all
     @tag = Tag.find(params[:tag_id])
