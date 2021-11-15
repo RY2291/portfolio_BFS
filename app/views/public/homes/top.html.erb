@@ -1,19 +1,60 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <!---スライド--->
-      <div class="a">
-        <div class="b"><img class="c" src="assets/image_1.jpg"></div>
-        <div class="b"><img class="c" src="assets/test5.jpg"></div>
-        <div class="b">3</div>
-      </div>
-      
-      <div class="btn btn-primary">
-       <%= link_to "新規登録", new_user_registration_path %>
-      </div>
-      <div class="btn btn-success">
-       <%= link_to "ログイン", new_user_session_path %>
-      </div>
+<div class="top-wrapper">
+  <div class="container">
+    <div class="title">
+      <h1>Architecture</h1>
+      <h1>Facade</h1>
+      <h1>Sahre.</h1>
+    </div>
+    <p>街で見かけた気になった建築物をコレクションできます。</p>
+    <p></p>
+     <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary" %>
+    
+     <%= link_to "ログイン", new_user_session_path, class: "btn btn-success" %>
+  </div>
+</div>
+
+<h2 class="text-center m-5 border-bottom p-1">Content</h2> 
+
+<div class="container-fluid">
+  <div class="row d-flex mb-4">
+    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none btn-outline-dark">
+      <h3 class="fas fa-check">写真を保存</h3>
+      <p></p>
+    </div>
+    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none btn-outline-dark">
+      <h3 class="fas fa-check">地図に保存</h3>
+    </div>
+    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none btn-outline-success">
+      <h3 class="fas fa-check">タグで共有</h3>
+    </div>
+  </div>
+  <div class="row row d-flex mb-4">
+    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none btn-outline-success">
+      <h3 class="fas fa-check">コメント</h3>      
+    </div>
+    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none btn-outline-success">
+      <h3 class="fas fa-check">レビュー</h3> 
+    </div>
+    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none btn-outline-success">
+      <h3 class="fas fa-check">コメント</h3>      
     </div>
   </div>
 </div>
+
+
+
+
+
+
+  
+
+  
+  
+  
+  
+  <!---スライド--->
+      <!--<div class="a">-->
+      <!--  <div class="b"><img class="c" src="assets/image_1.jpg"></div>-->
+      <!--  <div class="b"><img class="c" src="assets/test5.jpg"></div>-->
+      <!--  <div class="b">3</div>-->
+      <!--</div>-->

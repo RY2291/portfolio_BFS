@@ -20,6 +20,8 @@
 //= require_tree .
 
 /*global $ */
+
+// スライダー
 $(function() {
   $(".a").slick({
     dots: true,
