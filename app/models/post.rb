@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   has_many :tag_maps, dependent: :destroy
   has_many :tags, through: :tag_maps, dependent: :destroy
   has_many :post_images, dependent: :destroy
-  
+
   accepts_attachments_for :post_images, attachment: :image
   attachment :post_image
 
@@ -18,11 +18,12 @@ class Post < ApplicationRecord
   validates :address, presence: true
   validates :title, presence: true
   validates :introduction, presence: true, length: { minimum: 5}
-  
+
 
 
 
   def favorited_by?(user)
+     return false if user.nil?
      favorites.where(user_id: user.id).exists?
   end
 
@@ -44,6 +45,6 @@ class Post < ApplicationRecord
     end
   end
 
-  
-  
+
+
 end

@@ -2,7 +2,7 @@
   <div>
     <%= link_to comment.user.name, user_path(comment.user.id) %>
     <%= comment.comment %>
-    <% if comment.user.id == current_user.id %>
+    <% if comment.user.id == current_user&.id %>
       <br>
       投稿日：<%= comment.created_at.to_s(:datetime_jp) %>
       <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true do %>
