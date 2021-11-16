@@ -1,35 +1,51 @@
-<h3>タグリスト</h3>
-<% if @tag.exists? %>
-    <% @tag.each do |tag| %>
-      <%= link_to "# #{tag.tag_name}", tag_posts_path(tag_id: tag.id) %>
-      <%= tag.posts.count %>
+<div class="container-fluid bg-info">
+  <div class="grow pt-5 d-flex">
+    <div class="col-md-3">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">タグ</div>
+        <div class="card-body text-dark">
+          <p class="card-text">
+            <% if @tag.exists? %>
+              <% @tag.each do |tag| %>
+                <%= link_to "# #{tag.tag_name}", tag_posts_path(tag_id: tag.id) %>
+                (<%= tag.posts.count %>)
+              <% end %>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% @posts.each do |post| %>
+      <div class="col-md-3 col-sm-10">
+        <div class="card" style="width: 20rem;height: 25rem;">
+          <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+          <%= attachment_image_tag User.find(post.user_id), :profile_image, :fill, 30, 30, format: "jpg", fallback: "no_image-.jpg" %>
+          <div class="card-body pt-1">
+            <p class="card-title"><%= link_to post.title, post_path(post.id) %></p>
+            <p class="card-text mb-1"><%= post.address %></p>
+            <p class="card-text mb-1"><%= link_to post.user.name, user_path(post.user.id) %></p>
+            <p class="card-text"></p>
+          </div>
+          <div class="card-footer" style="display: flex; justify-content: flex-end;">
+            <P><%= post.created_at.strftime('%Y/%m/%d') %></P>
+            <div id="favorites_button_<%= post.id %>">
+             <%= render partial: "public/favorites/favorite", locals: {post: post } %>
+            </div>
+             <i class="far fa-comments"></i><%= link_to post.comments.count %>
+          </div>
+        </div>
+      </div>
     <% end %>
-<% end %>
-
-<table class='table table-hover table-inverse'>
-  <thead>
-   <tr>
-    <th>投稿者</th>
-    <th>Title</th>
-    <th>Opinion</th>
-    <th colspan="3"></th>
-   </tr>
-  </thead>
-  <tbody>
-   <% @posts.each do |post| %>
-    <tr>
-      <td>
-      <%= link_to user_path(post.user_id) do %>
-        <%= attachment_image_tag User.find(post.user_id), :profile_image, :fill, 40, 40, format: "jpg", fallback: "no_image-.jpg" %>
-        <%= post.user.name %>
-      <% end %>
-      </td>
-      <td><%= link_to post.title, post_path(post.id) %></td>
-      <td><%= post.introduction %></td>
-      <td></td>
-      <td></td>
-    </tr>
-   <% end %>
-  </tbody>
-</table>
-
+  </div>
+  <div class="grow">
+    <div class="col">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">並び替え</div>
+        <div class="card-body text-dark">
+          <p class="card-text">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
