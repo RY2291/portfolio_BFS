@@ -58,7 +58,6 @@
   }
 </style>
 
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap"></script>
 <script>
   // 地図表示
   function initMap() {
@@ -79,9 +78,10 @@
     let marker = new google.maps.Marker({
               position: buildPosition,
               map: map,
-              title: contentString
             });
+            
     marker.addListener("click", function(){
+      infowindow.setContent("<a href='<%=posts_path%>'>" +  contentString + "</a>");
       infowindow.open(map, marker);
     });
   }
@@ -108,5 +108,6 @@
 </script>
 
 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap"></script>
 
 

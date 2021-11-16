@@ -18,7 +18,14 @@
  @import 'font-awesome';
  @import "slick-theme";
  @import "slick";
-
+ 
+ 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ 
 // スライダー-----------------------------------
  .c {
   height: 500px;
@@ -87,6 +94,7 @@ background-blend-mode:lighten;
 .top-wrapper p {
  font-size: 2rem;
  margin-bottom: 90px;
+ background-color: rgba(255,255,255,.2);
 }
 
 .btn {
@@ -95,5 +103,15 @@ background-blend-mode:lighten;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.xxx {
+ display: flex;
+ text-align: center;
+ justify-content: space-evenly;
+}
+
+.content {
+ justify-content: center;
 }
 // ---------------------------------------------

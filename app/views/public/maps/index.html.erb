@@ -17,10 +17,10 @@
 
 <script>
   let map
+  let contentString = [];
   let infowindow = [];
   let markerLatLng = {};
-  const build_positions = gon.build_positions;
-  let contentString = "住所:";
+//  const build_positions = gon.build_positions;
   let marker = [];
  // 地図表示
   function initMap() {
@@ -31,19 +31,21 @@
             });
     // 都市の交通網表示
     let transitLayer = new google.maps.TransitLayer();
-    transitLayer.setMap(map);
-// 地図に複数マーカ表示
-    for (var i = 0; i < build_positions.length; i++) {
-      if (build_positions.length == 0) { continue };
-      markerLatLng = {lat: build_positions[i][0], lng: build_positions[i][1]}; // 緯度経度のデータ作成
+    // 地図に複数マーカ表示
+    let contentString = <%=@posts.pluck(:address).to_s.html_safe%>;
+    let lat = <%= @posts.pluck(:latitude).to_s %>
+    let lng = <%= @posts.pluck(:longitude).to_s %>
+    for (var i = 0; i < <%=@posts.length%>; i++) {
+  //if (build_positions.length == 0) { continue };
+      markerLatLng = {lat: lat[i], lng: lng[i]}; // 緯度経度のデータ作成
       marker[i] = new google.maps.Marker({
         position: markerLatLng,
         map: map,
-        title: contentString
+        // title: contentString[i]
       });
       // 吹き出し
-     infowindow[i] = new google.maps.InfoWindow({
-        content: contentString
+      infowindow[i] = new google.maps.InfoWindow({
+        content: contentString[i]
       });
 
       markerEvent(i);
@@ -52,13 +54,9 @@
   // マーカークリック時に吹き出しを表示する
   function markerEvent(i) {
     marker[i].addListener('click', function() {
+      infowindow[i].sentContent("< a href='<%= posts_path %>'>" + contentString[i] + "<a>");
       infowindow[i].open(map, marker[i]);
     });
-    
-  // window.addEventListener('load', function() {
-	 // google.maps.event.addDomListener(window, 'load', initialize);
-  //   });
-  
   };
 </script>
 

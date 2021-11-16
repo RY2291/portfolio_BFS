@@ -1,6 +1,6 @@
 class Public::PostsController < ApplicationController
 
-  before_action :ensure_correct_user, { only: [:create, :edit, :update, :destroy, :new] }
+  before_action :ensure_correct_user, { only: [:create, :edit, :update, :destroy] }
 
   def new
     @post = Post.new
