@@ -80,7 +80,7 @@
             });
             
     marker.addListener("click", function(){
-      infowindow.setContent("<a href='<%=posts_path%>'>" +  contentString + "</a>");
+      infowindow.setContent("<a href='<%= maps_path %>'>" +  contentString + "</a>");
       infowindow.open(map, marker);
     });
   }

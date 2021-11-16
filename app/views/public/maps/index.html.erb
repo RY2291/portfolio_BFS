@@ -17,7 +17,8 @@
 
 <script>
   let map
-  let contentString = [];
+  var contentString = <%= @posts.pluck(:id).to_s.html_safe %>;
+  var contentAddress = <%= @posts.pluck(:address).to_s.html_safe %>;
   let infowindow = [];
   let markerLatLng = {};
 //  const build_positions = gon.build_positions;
@@ -32,7 +33,7 @@
     // 都市の交通網表示
     let transitLayer = new google.maps.TransitLayer();
     // 地図に複数マーカ表示
-    let contentString = <%=@posts.pluck(:address).to_s.html_safe%>;
+    console.log(contentString);
     let lat = <%= @posts.pluck(:latitude).to_s %>
     let lng = <%= @posts.pluck(:longitude).to_s %>
     for (var i = 0; i < <%=@posts.length%>; i++) {
@@ -45,7 +46,6 @@
       });
       // 吹き出し
       infowindow[i] = new google.maps.InfoWindow({
-        content: contentString[i]
       });
 
       markerEvent(i);
@@ -54,7 +54,11 @@
   // マーカークリック時に吹き出しを表示する
   function markerEvent(i) {
     marker[i].addListener('click', function() {
-      infowindow[i].sentContent("< a href='<%= posts_path %>'>" + contentString[i] + "<a>");
+      let id_set = contentString[i];
+      let address_set = contentAddress[i];
+      let url_set = `https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/${id_set}`;
+      let link_set = `<a href="${url_set}">${address_set}</a>`;
+      infowindow[i].setContent(link_set);
       infowindow[i].open(map, marker[i]);
     });
   };

@@ -1,5 +1,5 @@
 <div class="container-fluid bg-info">
-  <div class="grow pt-5 d-flex">
+  <div class="frow pt-5 d-flex">
     <div class="col-md-3">
       <div class="card border-primary mb-3" style="max-width: 20rem;">
         <div class="card-header">タグ</div>
@@ -15,27 +15,29 @@
         </div>
       </div>
     </div>
-    <% @posts.each do |post| %>
-      <div class="col-md-3 col-sm-10">
-        <div class="card" style="width: 20rem;height: 25rem;">
-          <!--<img class="card-img-top" src="..." alt="Card image cap">-->
-          <%= attachment_image_tag User.find(post.user_id), :profile_image, :fill, 30, 30, format: "jpg", fallback: "no_image-.jpg" %>
-          <div class="card-body pt-1">
-            <p class="card-title"><%= link_to post.title, post_path(post.id) %></p>
-            <p class="card-text mb-1"><%= post.address %></p>
-            <p class="card-text mb-1"><%= link_to post.user.name, user_path(post.user.id) %></p>
-            <p class="card-text"></p>
-          </div>
-          <div class="card-footer" style="display: flex; justify-content: flex-end;">
-            <P><%= post.created_at.strftime('%Y/%m/%d') %></P>
-            <div id="favorites_button_<%= post.id %>">
-             <%= render partial: "public/favorites/favorite", locals: {post: post } %>
+    <div class="row">
+        <% @posts.each do |post| %>
+          <div class="col-3 col-sm-3 pr-1 mb-2 pos-tcard">
+            <div class="card" style="width: 20rem;height: 25rem;">
+              <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+              <%= attachment_image_tag User.find(post.user_id), :profile_image, :fill, 30, 30, format: "jpg", fallback: "no_image-.jpg" %>
+              <div class="card-body pt-1">
+                <p class="card-title"><%= link_to post.title, post_path(post.id) %></p>
+                <p class="card-text mb-1"><%= post.address %></p>
+                <p class="card-text mb-1"><%= link_to post.user.name, user_path(post.user.id) %></p>
+                <p class="card-text"></p>
+              </div>
+              <div class="card-footer" style="display: flex; justify-content: flex-end;">
+                <P><%= post.created_at.strftime('%Y/%m/%d') %></P>
+                <div id="favorites_button_<%= post.id %>">
+                 <%= render partial: "public/favorites/favorite", locals: {post: post } %>
+                </div>
+                 <i class="far fa-comments"><%= link_to post.comments.count %></i>
+              </div>
             </div>
-             <i class="far fa-comments"></i><%= link_to post.comments.count %>
           </div>
-        </div>
-      </div>
-    <% end %>
+        <% end %>
+    </div>
   </div>
   <div class="grow">
     <div class="col">
