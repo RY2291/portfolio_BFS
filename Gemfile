@@ -84,3 +84,6 @@ gem "gon"
 gem 'dotenv-rails'
 
 gem 'rails-i18n'
+
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
