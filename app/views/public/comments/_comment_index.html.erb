@@ -1,17 +1,18 @@
 <% comments.each do |comment| %>
   <div>
+    <i class="fas fa-user" style="margin-right:1rem;"></i>
     <%= link_to comment.user.name, user_path(comment.user.id) %>
-    <%= comment.comment %>
+    <div class="border border-dark rounded"><%= comment.comment %></div>
     <% if comment.user.id == current_user&.id %>
       <br>
-      投稿日：<%= comment.created_at.to_s(:datetime_jp) %>
+      コメント日：<%= comment.created_at.strftime('%Y/%m/%d') %>
       <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true do %>
-        <span class="panel-icon"><i class="fas fa-trash"></i></span>
+        <span class="panel-icon"><i class="fas fa-trash ml-3"></i></span>
       <% end %>
       <hr>
     <% else %>
       <br>
-      投稿日：<%= comment.created_at.to_s(:datetime_jp) %>
+      投稿日：<%= comment.created_at.strftime('%Y/%m/%d') %>
       <hr>
     <% end %>
   </div>

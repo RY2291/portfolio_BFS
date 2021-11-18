@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// -------index.html.erb----------------------------------------------
+.card {
+    .img-sam {
+        width: 315px;
+        height: 255px;
+        object-fit: cover;
+    }
+}
+
 .card-body {
     .badge {
         background-color: #44d56ac2;
@@ -17,7 +27,7 @@
 }
 
 .card-footer {
-    
+
     .fa-heart {
     font-size: 28px;
     margin: 0 20px 0 20px;
@@ -28,3 +38,87 @@
     margin-right: 30px;
 }
 }
+
+// -------show.html.erb----------------------------
+
+.con-lef {
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.img-box {
+    background-color: red;
+    width: 19.5rem;
+    height: 35rem;
+    margin: auto;
+}
+
+.thum {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+//     .post-thum {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+
+
+// スライダー-----------------------------------
+ .img-size {
+        width: 19.5rem;
+        height: 35rem;
+        object-fit: cover;
+    }
+
+ .slick-dots {
+  li {
+    font-size: 20px !important;
+    button:before {
+      content: "○" !important;
+      font-size: 14px !important;
+      color: rgb(60, 60, 60) !important;
+    }
+  }
+}
+
+
+
+.cent {
+    .cent-t {
+    display: flex;
+    margin-bottom: 1rem;
+    h3 {
+        margin-right: 11rem;
+    }
+    }
+    .review-rating {
+        text-align: center;
+    }
+    #map {
+        height: 400px;
+        width: 485px;
+        margin-top: 3rem;
+    }
+}
+
+.tag {
+    display: inline-block;
+	margin: 0 .1em .6em 0;
+	padding: .6em;
+	line-height: 1;
+	color: #fff;
+	text-decoration: none;
+	background-color: #0000ee;
+	border-radius: 2em 0 0 2em;
+	:before {
+	    content: '●';
+	    margin-right: .5em;
+	    color: #fff;
+	    }
+}
+

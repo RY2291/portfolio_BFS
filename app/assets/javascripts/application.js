@@ -23,9 +23,9 @@
 
 // スライダー
 $(function() {
-  $(".a").slick({
+  $(".img-size").slick({
     dots: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
   });
 });

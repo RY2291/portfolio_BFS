@@ -1,61 +1,78 @@
-<div class="container">
+<div class="container-fluid bg-info pt-4">
   <div class="row">
-    <div class="col-md-2">
-      <% @post.post_images.each do |image| %>
-        <%= attachment_image_tag image, :image, :fill, 100, 100, fallback: "no_image-.jpg" %>
+    <div class="col-md-4 con-lef"> <!--写真エリア -->
+      <h1 class="post-title"><%= @post.title%></h1>
+      <div class="row">
+        <div class="col-md-12">
+          <!---スライド--->
+          <div class="img-box">
+            <div class="img-size">
+              <% @post.post_images.each do |image| %>
+                <%= attachment_image_tag image, :image, fallback: "no_image-.jpg", class: "img-size" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--サムネイル-->
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <% @post.post_images.each do |image| %>
+            <%= attachment_image_tag image, :image, fallback: "no_image-.jpg", class: "thum" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 cent">
+      <div class="cent-t">
+        <h3><i class="fas fa-user" style="margin-right:1rem;"></i><%= link_to @post.user.name, post_path(@post.id) %></h3>
+        <p><%= @post.created_at.strftime('%Y/%m/%d') %></p>
+      </div>
+      <!---タグ--->
+      <% @post.tags.each do |tag| %>
+        <div class="tag p-2 m-2">
+          <%= "# #{tag.tag_name}(#{tag.posts.count})" %>
+        </div>
       <% end %>
+      <div class="introduction mt-3">
+        <h4>紹介文</h4>
+        <p class="border border-success"><%= @post.introduction %></p>
+      </div>
+      <!--評価を平均点て表示-->
+      <div class="review-rating" id="star-read" data-score="<%= @post.rates.average(:rate) %>">評価</div>
+      <!--所在地-->
+      <div class="address mt-4">
+        <h4>所在地</h4>
+        <p><%= @post.address %></p>
+      </div>
+      <!--地図表示-->
+      <div id="map"></div>
+    </div>
+    <div class="col-md-3">
+      <!--評価送信フォーム-->
+      <%= form_with(model:[@rate,@post], url: rate_path(post_id: @post), method: :post, local: true) do |f| %>
+        <div id="star"><%= f.hidden_field :rate, :value => "score"%></div>
+        <%= f.submit "評価する" %>
+      <% end %>
+      <!--コメント送信フォーム(非同期通信)-->
+      <div class="comment_create">
+        <%= render partial: "public/comments/comment_form", locals: { post: @post, comment: @comment } %>
+      </div>
+        <!--コメントを表示-->
+        <h4 class="mt-4">コメント一覧</h4>
+        <div id="comment_area">
+          <%= render partial: "public/comments/comment_index", locals: { comments: @comments } %>
+        </div>
+        <div class="post-edit mb-4">
+          <% if @user == current_user %>
+            <%= link_to "投稿を編集", edit_post_path(@post) %>
+          <% end %>
+          <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"} %>
+        </div>
     </div>
   </div>
 </div>
-<%= flash[:notice] %>
 
-<!--評価を平均点て表示-->
-<div class="review-rating" id="star-read" data-score="<%= @post.rates.average(:rate) %>">評価</div>
-<% if @user == current_user %>
-  <%= link_to "投稿を編集", edit_post_path(@post) %>
-<% end %>
-  <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"} %>
-
-  <!---いいね(非同期通信)--->
-<div id="favorites_button_<%= @post.id %>">
- <%= render partial: "public/favorites/favorite", locals: {post: @post } %>
-</div>
-
-
-  <!--評価送信フォーム-->
-  <%= form_with(model:[@rate,@post], url: rate_path(post_id: @post), method: :post, local: true) do |f| %>
-    <div id="star">
-      <%= f.hidden_field :rate, :value => "score"%>
-    </div>
-    <%= f.submit "評価する" %>
-  <% end %>
-
-  <!--コメント送信フォーム(非同期通信)-->
-  <h2>コメント一覧</h2>
-  <div class="comment_create">
-    <% if user_signed_in? %>
-      <%= render partial: "public/comments/comment_form", locals: { post: @post, comment: @comment } %>
-    <% end %>
-    <!--コメントを表示-->
-    <div id="comment_area">
-      <%= render partial: "public/comments/comment_index", locals: { comments: @comments } %>
-    </div>
-  </div>
-
-  <h2>タグ</h2>
-  <% @post_tags.each do |tag| %>
-    <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id) %>
-  <% end %>
-
-<!--地図表示-->
-<div id="map"></div>
-
-<style>
-  #map {
-    height: 400px;
-    width: 450px;
-  }
-</style>
 
 <script>
   // 地図表示
@@ -78,7 +95,7 @@
               position: buildPosition,
               map: map,
             });
-            
+
     marker.addListener("click", function(){
       infowindow.setContent("<a href='<%= maps_path %>'>" +  contentString + "</a>");
       infowindow.open(map, marker);

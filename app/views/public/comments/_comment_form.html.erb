@@ -1,5 +1,7 @@
-<%= form_with(model:[post, comment]) do |f| %>
-  <%= render "layouts/error_message", model: f.object %>
-  <%= f.text_area :comment, placeholder: "感想などをコメントしてみましょう！" %>
-  <%= f.submit "コメントする" %>
+<% if user_signed_in? %>
+  <%= form_with(model:[post, comment]) do |f| %>
+    <%= render "layouts/error_message", model: f.object %>
+    <%= f.text_area :comment, placeholder: " 感想などをコメントしてみましょう！", class: "comment-form" %>
+    <%= f.submit "コメントする", class: "btn btn-success" %>
+  <% end %>
 <% end %>
