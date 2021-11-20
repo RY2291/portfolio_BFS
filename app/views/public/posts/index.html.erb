@@ -23,8 +23,6 @@
         <% @posts.each do |post| %>
           <div class="col-12 col-xl-4 pr-1 mb-4 pos-tcard">
             <div class="card" style="width: 20rem;height: 25rem;">
-              <!--<img class="card-img-top" src="..." alt="Card image cap">-->
-              <!--<#%= attachment_image_tag User.find(post.user_id), :profile_image, :fill, 30, 30, format: "jpg", fallback: "no_image-.jpg" %>-->
               <%= attachment_image_tag post.post_images[0], :image, size: "315x255", format: "jpg", fallback: "no_image-.jpg", class: "img-sam" %>
               <div class="card-body pt-1">
                 <p class="card-title mb-0"><%= link_to post.title, post_path(post.id) %></p>

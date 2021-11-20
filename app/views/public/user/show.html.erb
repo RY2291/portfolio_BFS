@@ -1,9 +1,63 @@
-<div class="container-fluid">
+<div class="container-fluid bg-info">
+  <h1>mypage</h1>
+  <%= flash[:notice]  %>
   <div class="row">
     <div class="col-md-5">
-      
+      <%= attachment_image_tag @user, :profile_image, :fill, 30, 30, format: "jpg", fallback: "no_image-.jpg", class: "mb-4" %>
+      <table class="table">
+        <tbody>
+          <tr></tr>
+          <tr>
+            <th>ニックネーム</th>
+            <th><%= @user.name %></th>
+          </tr>
+          <tr>
+            <th>紹介文</th>
+            <th><%= @user.introduction %></th>
+          </tr>
+        </tbody>
+      </table>
+      <div class="following">
+        フォロー<%= link_to @user.followings.count, user_follow_path(@user.id)  %>
+      </div>
+      <div class="followers">
+        フォロワー<%= link_to @user.followers.count, user_follow_path(@user.id)  %>
+      </div>
+      <div class="user-edit btn mb-4 mt-4">
+        <% if user_signed_in? && current_user %>
+          <%= link_to "マイページ編集", edit_user_path(@user.id), class: "btn-success p-3" %>
+        <% end %>
+      </div>
+      <% if user_signed_in? %>
+        <% if @user != current_user %>
+          <% if current_user.following?(@user) %>
+          <!--引数にフォローするuser_idを渡す-->
+            <%= link_to "フォローを外す", user_relationships_path(user_id: @user.id), method: :delete, class: "btn btn-danger p-3" %>
+          <% else %>
+            <%= link_to "フォローをする",  user_relationships_path(user_id: @user.id), method: :post, class: "btn btn-primary p-3" %>
+          <% end %>
+        <% end %>
+      <% end %>
     </div>
-    <div class="col-md-7"></div>
+    <div class="col-md-7">
+      <% @posts.each do |post| %>
+      <div class="index-box d-flex mb-3">
+        <div class="col-md-5">
+          <%= attachment_image_tag post.post_images[0], :image, :fill, 100, 100, format: "jpg", fallback: "no_image-.jpg" %>
+          <%= link_to post.title, post_path(post.id) %>
+        </div>
+        <div class="col-md-7">
+          <%= post.introduction %>
+          <%= post.address %>
+          <div id="favorites_button_<%= post.id %>">
+           <%= render partial: "public/favorites/favorite", locals: {post: post } %>
+          </div>
+          <i class="far fa-comments"><%= link_to post.comments.count, post_path(post.id) %></i>
+        </div>
+      </div>
+
+      <% end %>
+    </div>
   </div>
 </div>
 
@@ -22,24 +76,9 @@
 
 
 
-<h1>mypage</h1>
-<%= flash[:notice]  %>
 
-<% if user_signed_in? && current_user %>
-  <%= link_to "マイページ編集", edit_user_path(@user.id) %>
-<% end %>
 
-<% if user_signed_in? %>
-  <% if @user != current_user %>
-    <% if current_user.following?(@user) %>
-    <!--引数にフォローするuser_idを渡す-->
-      <%= link_to "フォローを外す", user_relationships_path(user_id: @user.id), method: :delete %>
-    <% else %>
-      <%= link_to "フォローをする",  user_relationships_path(user_id: @user.id), method: :post %>
-    <% end %>
-  <% end %>
-<% end %>
 
-フォロー<%= link_to @user.followings.count, user_follow_path(@user.id)  %>
 
-フォロワー<%= link_to @user.followers.count, user_follow_path(@user.id)  %>
+
+

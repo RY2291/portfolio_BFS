@@ -18,14 +18,13 @@
 //= require turbolinks
 //= require jquery.raty.js
 //= require_tree .
-
 /*global $ */
 
 // スライダー
-$(function() {
+document.addEventListener("turbolinks:load", function(){
   $(".img-size").slick({
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
   });
 });
