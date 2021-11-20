@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   }
 
   scope module: :public do
-    get "building_facade_share" => "homes#top", as: "top"
+    root "homes#top"
     resources :user, only: [:show, :edit, :update] do
       resource :relationships, only: [:create, :destroy]
       get "follow" => "relationships#follow", as: "follow"

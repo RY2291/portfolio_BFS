@@ -24,7 +24,7 @@ class Public::UserController < ApplicationController
     @user.update(is_deleted: true)
     reset_session
     flash[:notice] = "退会が完了しました!"
-    redirect_to top_path
+    redirect_to _path
   end
 
   private
