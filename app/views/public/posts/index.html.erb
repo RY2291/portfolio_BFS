@@ -21,7 +21,7 @@
     </div>
     <div class="row">
         <% @posts.each do |post| %>
-          <div class="col-12 col-xl-4 pr-1 mb-4 pos-tcard">
+          <div class="col-12 col-xl-4 pr-1 mb-4 postcard">
             <div class="card" style="width: 20rem;height: 25rem;">
               <%= attachment_image_tag post.post_images[0], :image, size: "315x255", format: "jpg", fallback: "no_image-.jpg", class: "img-sam" %>
               <div class="card-body pt-1">
