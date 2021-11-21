@@ -62,6 +62,10 @@ main {
  height: 40px;
  }
 
+ .field_with_errors {
+  display: contents;
+}
+
  // -------top-----------------------------------
 
 .top-wrapper {
@@ -111,7 +115,11 @@ main {
  justify-content: center;
 }
 
-
+// -----------新規登録----------------
+.signup-btn {
+ margin: 3rem 0 0 15rem;
+ width: 15rem;
+}
 
 
 // ----------------------------レスポンシブ----------------------------------------------
@@ -126,6 +134,11 @@ main {
 @media screen and (max-width: 550px){
  .top-wrapper h1 {
   font-size: 2.7rem;
+ }
+
+ .signup-btn {
+  margin: 3rem 0 2rem 0;
+  width: 15rem;
  }
 }
 
