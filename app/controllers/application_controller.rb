@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_paramerters, if: :devise_controller?
+  add_flash_types :success, :info, :warning, :danger
 
   def after_sign_up_path_for(resource)
     case resource

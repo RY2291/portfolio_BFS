@@ -1,6 +1,5 @@
 <div class="container-fluid bg-info">
   <h1>mypage</h1>
-  <%= flash[:notice]  %>
   <div class="row">
     <div class="col-md-5">
       <%= attachment_image_tag @user, :profile_image, :fill, 30, 30, format: "jpg", fallback: "no_image-.jpg", class: "mb-4" %>
@@ -55,7 +54,6 @@
           <i class="far fa-comments"><%= link_to post.comments.count, post_path(post.id) %></i>
         </div>
       </div>
-
       <% end %>
     </div>
   </div>
