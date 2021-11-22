@@ -28,7 +28,7 @@
           <%= link_to "フォローをする",  user_relationships_path(user_id: @user.id), method: :post, class: "btn btn-primary p-3" %>
         <% end %>
       <% end %>
-  </div>
+    </div>
     <div class="col-md-7 mt-5">
       <% @posts.each do |post| %>
       <div class="index-box d-flex mb-3">
@@ -38,7 +38,7 @@
         </div>
         <div class="col-md-7">
           <%= post.introduction %>
-          <%= post.address %>
+          <div class="address-box"><%= post.address %></div>
           <div id="favorites_button_<%= post.id %>">
            <%= render partial: "public/favorites/favorite", locals: {post: post } %>
           </div>
