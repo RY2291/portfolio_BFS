@@ -2,7 +2,7 @@ class Admin::UsersController < ApplicationController
   before_action :authenticate_admin!
   def show
     @user = User.find(params[:id])
-    @posts = Post.all
+    @posts = Post.all.page(params[:page]).per
   end
 
   def edit

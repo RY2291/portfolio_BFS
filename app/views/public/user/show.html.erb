@@ -1,44 +1,35 @@
 <div class="container-fluid bg-info">
-  <h1>mypage</h1>
   <div class="row">
-    <div class="col-md-5">
-      <%= attachment_image_tag @user, :profile_image, :fill, 30, 30, format: "jpg", fallback: "no_image-.jpg", class: "mb-4" %>
-      <table class="table">
-        <tbody>
-          <tr></tr>
-          <tr>
-            <th>ニックネーム</th>
-            <th><%= @user.name %></th>
-          </tr>
-          <tr>
-            <th>紹介文</th>
-            <th><%= @user.introduction %></th>
-          </tr>
-        </tbody>
-      </table>
-      <div class="following">
-        フォロー<%= link_to @user.followings.count, user_follow_path(@user.id)  %>
+    <div class="col-md-5 user-info">
+      <%= attachment_image_tag @user, :profile_image, :fill, 150, 150, format: "jpg", fallback: "no_image-.jpg", class: "mb-4" %>
+      <div class="user-name">
+        <h5 class="t-heading">ニックネーム</h5>
+        <h4><%= @user.name %></h4>
       </div>
-      <div class="followers">
-        フォロワー<%= link_to @user.followers.count, user_follow_path(@user.id)  %>
+      
+      <div class="user-introduction">
+        <h5 class="t-heading">紹介文</h5>
+        <p><%= @user.introduction %></p>
+      </div>
+      <div class="follow">
+        <h5 class="t-heading">フォロー<%= link_to @user.followings.count, user_follow_path(@user.id), class: "following" %></h5>
+        <h5 style="margin-left: 11rem;">フォロワー<%= link_to @user.followers.count, user_follow_path(@user.id), class: "followers" %></h5>
       </div>
       <div class="user-edit btn mb-4 mt-4">
         <% if user_signed_in? && current_user %>
-          <%= link_to "マイページ編集", edit_user_path(@user.id), class: "btn-success p-3" %>
+          <%= link_to "マイページ編集", edit_user_path(@user.id), class: "btn btn-success p-3" %>
         <% end %>
       </div>
-      <% if user_signed_in? %>
-        <% if @user != current_user %>
-          <% if current_user.following?(@user) %>
-          <!--引数にフォローするuser_idを渡す-->
-            <%= link_to "フォローを外す", user_relationships_path(user_id: @user.id), method: :delete, class: "btn btn-danger p-3" %>
-          <% else %>
-            <%= link_to "フォローをする",  user_relationships_path(user_id: @user.id), method: :post, class: "btn btn-primary p-3" %>
-          <% end %>
+      <% if user_signed_in? && @user != current_user %>
+        <% if current_user.following?(@user) %>
+        <!--引数にフォローするuser_idを渡す-->
+          <%= link_to "フォローを外す", user_relationships_path(user_id: @user.id), method: :delete, class: "btn btn-danger p-3" %>
+        <% else %>
+          <%= link_to "フォローをする",  user_relationships_path(user_id: @user.id), method: :post, class: "btn btn-primary p-3" %>
         <% end %>
       <% end %>
-    </div>
-    <div class="col-md-7">
+  </div>
+    <div class="col-md-7 mt-5">
       <% @posts.each do |post| %>
       <div class="index-box d-flex mb-3">
         <div class="col-md-5">
@@ -55,6 +46,9 @@
         </div>
       </div>
       <% end %>
+      <div class="row" style="justify-content: center;">
+        <%= paginate @posts %>
+      </div>
     </div>
   </div>
 </div>

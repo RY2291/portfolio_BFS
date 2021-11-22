@@ -2,10 +2,46 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// --------ユーザ詳細ページ(show.html.erb)----------------
+
 .user-info {
-  width: 370px;
-  height: 800px;
-  background-color: coral;
-  border: 1px solid black;
-  margin: 40px;
+  margin-top: 4rem;
+  padding-left: 3rem;
+}
+
+.t-heading {
+  border-left: 10px solid #ff0000;
+ 
+  padding: 5px 20px;
+}
+
+.user-name {
+  display: flex;
+  h5 {
+    margin-right: 6rem;
+  }
+}
+
+.user-introduction {
+  display: flex;
+  margin-top: 2rem;
+  h5 {
+    margin-right: 9rem;
+  }
+  p {
+    width: 60%;
+  }
+}
+
+.follow {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.following {
+  margin-left: 3rem;
+}
+
+.followers {
+  margin-left: 1.8rem;
 }
