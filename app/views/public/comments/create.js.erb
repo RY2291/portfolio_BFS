@@ -1,3 +1,4 @@
 $("#comment_area").html("<%= j (render partial: "public/comments/comment_index", locals: { comments: @comments }) %>");
 $("textarea").val("")
-alert("コメントをしました")
+<!--alert("コメントをしました")-->
+$("#flash-message").html("<%= j(render "layouts/flash") %>");

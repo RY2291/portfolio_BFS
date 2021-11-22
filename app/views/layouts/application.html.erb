@@ -125,7 +125,9 @@
       </nav>
     </header>
     <main>
-      <%= render partial: "layouts/flash" %>
+      <div id="flash-message">
+        <%= render partial: "layouts/flash" %>
+      </div>
       <%= yield %>
     </main>
     <footer>

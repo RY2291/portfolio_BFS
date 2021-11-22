@@ -2,7 +2,8 @@
 
 <div class="container-fluid bg-info pt-4">
   <div class="row">
-    <div class="col-md-4 con-lef"> <!--写真エリア -->
+    <div class="col-md-4 con-lef mt-3">
+     <!--写真エリア -->
       <h1 class="post-title"><%= @post.title%></h1>
       <div class="row">
         <div class="col-md-12">
@@ -25,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-5 cent">
+    <div class="col-md-5 cent mt-3">
       <div class="cent-t">
         <h3><i class="fas fa-user" style="margin-right:1rem;"></i><%= link_to @post.user.name, user_path(@post.user.id) %></h3>
         <p><%= @post.created_at.strftime('%Y/%m/%d') %></p>
@@ -33,29 +34,32 @@
       <!---タグ--->
       <% @post.tags.each do |tag| %>
         <div class="tag p-2 m-2">
-          <%= "# #{tag.tag_name}(#{tag.posts.count})" %>
+          <%= link_to "# #{tag.tag_name}(#{tag.posts.count})", tag_posts_path(tag_id: tag.id), class: "link-text" %>
         </div>
       <% end %>
-      <div class="introduction mt-3">
+      <div class="introduction mt-5">
         <h4>紹介文</h4>
         <p class="border border-success"><%= @post.introduction %></p>
       </div>
-      <!--評価を平均点て表示-->
-      <div class="review-rating" id="star-read" data-score="<%= @post.rates.average(:rate) %>">評価</div>
+      <h4 class="mt-5">評価</h4>
+      <div class="rate">
+        <!--評価を平均点て表示-->
+        <div class="review-rating" id="star-read" data-score="<%= @post.rates.average(:rate) %>"></div>
+        <!--評価送信フォーム-->
+        <%= form_with(model:[@rate,@post], url: rate_path(post_id: @post), method: :post, class: "rate-form", local: true) do |f| %>
+          <div id="star"><%= f.hidden_field :rate, :value => "score"%></div>
+          <%= f.submit "評価する" %>
+        <% end %>
+      </div>
       <!--所在地-->
-      <div class="address mt-4">
+      <div class="address mt-5">
         <h4>所在地</h4>
         <p><%= @post.address %></p>
       </div>
       <!--地図表示-->
       <div id="map"></div>
     </div>
-    <div class="col-md-3">
-      <!--評価送信フォーム-->
-      <%= form_with(model:[@rate,@post], url: rate_path(post_id: @post), method: :post, local: true) do |f| %>
-        <div id="star"><%= f.hidden_field :rate, :value => "score"%></div>
-        <%= f.submit "評価する" %>
-      <% end %>
+    <div class="col-md-3 con-right">
       <!--コメント送信フォーム(非同期通信)-->
       <div class="comment_create">
         <%= render partial: "public/comments/comment_form", locals: { post: @post, comment: @comment } %>

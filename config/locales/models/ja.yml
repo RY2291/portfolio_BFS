@@ -12,6 +12,7 @@ ja:
       user:
         name: ニックネーム
         emai: メールアドレス
+      comment:
         comment: コメント
   views:
     pagination:
