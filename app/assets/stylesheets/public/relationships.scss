@@ -6,6 +6,63 @@ h4 {
   text-align: center;
 }
 
+
+.follow-content{
+  margin-bottom: 4rem;
+}
+
+.follow-name {
+  margin-left: 1.6875rem;
+}
+
+.follow-introduction {
+  margin: -7.1rem 0 0 7rem;
+}
+
+.follow-btn {
+  border-bottom: 1px solid white;
+  margin-bottom: 2rem;
+}
+
 .fb {
-    border-bottom: 1px solid white;
+  margin: 1rem 0 0 35rem;
+}
+
+
+// ---------------------------------------------
+// PCサイズ
+@media screen and (max-width: 1365px){
+  .fb {
+  margin: 1rem 0 0 28rem;
+}
+}
+
+@media screen and (max-width: 1040px){
+  .fb {
+  margin: 1rem 0 0 19rem;
+  }
+}
+
+@media screen and (max-width: 885px){
+  .fb {
+  margin: 1rem 0 0 14rem;
+  }
+}
+
+@media screen and (max-width: 682px){
+  .fb {
+  margin: 1rem 0 0 7rem;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .follow-introduction {
+    margin: 5px 0 0 0 ;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .fb {
+  margin: 1rem 0 0 4rem;
+  }
 }
