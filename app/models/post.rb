@@ -27,6 +27,8 @@ class Post < ApplicationRecord
      favorites.where(user_id: user.id).exists?
   end
 
+
+  # タグ作成メソッド
   def save_tag(sent_tags)
     current_tags = self.tags.pluck(:tag_name) unless self.tags.nil?
     old_tags = current_tags - sent_tags
@@ -44,7 +46,19 @@ class Post < ApplicationRecord
       self.tags << new_post_tag
     end
   end
-
+  
+  def self.sort(selection)
+    case selection
+    when "new"
+      return all.order(created_at: :DESC)
+    when "old"
+      return all.order(created_at: :ASC)
+    when "likes"
+      return find(Favorite.group(:post_id).order(Arel.sql("count(post_id) desc")).pluck(:post_id))
+    when "dislikes"
+      return find(Favorite.group(:post_id).order(Arel.sql("count(post_id) asc")).pluck(:post_id))
+    end
+  end
 
 
 end

@@ -14,35 +14,31 @@
       <div class="card border-primary mb-3" style="max-width: 20rem;">
         <div class="card-header text-center">並び替え</div>
         <div class="card-body text-dark">
-          <p class="card-text">
-          </p>
+          <%= form_with model: @post, url: posts_path, method: :get, local: true do |f| %>
+            <%= f.select :keyword, [["新しい順", "new"],
+                                    ["古い順", "old"],
+                                    ["いいねが多い順", "likes"],
+                                    ["いいねが少ない順", "dislikes"]
+                                    ] %>
+            <%= f.submit "並び替える", class: "btn btn-outline-secondary btn-sm" %>
+          <% end %>
         </div>
       </div>
     </div>
     <div class="row">
-        <% @posts.each do |post| %>
-          <div class="col-12 col-xl-4 pr-1 mb-4 postcard">
-            <div class="card" style="width: 20rem;height: 25rem;">
-              <%= attachment_image_tag post.post_images[0], :image, size: "315x255", format: "jpg", fallback: "no_image-.jpg", class: "img-sam" %>
-              <div class="card-body pt-1">
-                <p class="card-title mb-0"><%= link_to post.title, post_path(post.id) %></p>
-                <p class="card-text mb-1"><%= post.address %></p>
-                <p class="card-text mb-1"><%= link_to post.user.name, user_path(post.user.id) %></p>
-                <p class="card-text"></p>
-              </div>
-              <div class="card-footer d-flex p-0">
-                <div id="favorites_button_<%= post.id %>">
-                 <%= render partial: "public/favorites/favorite", locals: {post: post } %>
-                </div>
-                <i class="far fa-comments"><%= link_to post.comments.count %></i>
-                <p><%= post.created_at.strftime('%Y/%m/%d') %></p>
-              </div>
-            </div>
-          </div>
-        <% end %>
+      <% if @selected_posts %>
+        <!--並び替えが選択されたとき-->
+        <%= render partial: "public/posts/index", locals: { posts: @selected_posts} %>
+      <% else %>
+        <%= render partial: "public/posts/index", locals: { posts: @posts} %>
+      <% end %>
     </div>
   </div>
   <div class="row" style="justify-content: center;">
-    <%= paginate @posts %>
+    <% if @selected_posts %>
+      <%= paginate @selected_posts %>
+    <% else %>
+      <%= paginate @posts %>
+    <% end %>
   </div>
 </div>

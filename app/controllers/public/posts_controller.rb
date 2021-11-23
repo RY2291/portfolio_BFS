@@ -21,9 +21,12 @@ class Public::PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.page(params[:page]).per(9)
+    if selection = params[:keyword]
+      @selected_posts = Post.sort(selection).page(params[:page]).per(9)
+    else
+      @posts = Post.all.page(params[:page]).per(9)
+    end
     @tag = Tag.all
-
   end
 
   def show
