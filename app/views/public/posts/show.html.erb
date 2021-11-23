@@ -17,7 +17,7 @@
       </div>
       <!--サムネイル-->
       <div class="row">
-        <div class="col-md-3 col-sm-6 mt-4 mb-4">
+        <div class="col-md-3 col-sm-6 mt-4 mb-4 thum-img">
           <% @post.post_images.each do |image| %>
             <%= attachment_image_tag image, :image, fallback: "no_image-.jpg", class: "thum" %>
           <% end %>

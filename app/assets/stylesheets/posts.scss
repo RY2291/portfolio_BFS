@@ -54,12 +54,18 @@
     margin: auto;
 }
 
-.thum {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    justify-content: space-between;
+.thum-img {
+    display: flex;
+    flex-direction: row;
+    .thum {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        justify-content: space-between;
+    }
 }
+
+
 
 
 // スライダー-----------------------------------
@@ -133,7 +139,7 @@
         .rate {
             display: flex;
             flex-direction: column;
-            
+
             .rate-form {
                 margin-left: 0;
             }
@@ -142,6 +148,11 @@
              height: 30rem;
             width: 22rem;
         }
+    }
+    .thum-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     }
 
 }
