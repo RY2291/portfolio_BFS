@@ -1,35 +1,36 @@
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col">
+      <h2 class="mb-5">新規投稿</h2>
       <%= form_with model: @post, local:true do |f| %>
         <%= render "layouts/error_message", model: f.object %>
         <div class="form-group">
           <%= f.label :title, "タイトル" %>
-          <%= f.text_field :title, autofocus: "" %>
+          <%= f.text_field :title, autofocus: "", class: "col-sm-12 new-field pl-2"%>
         </div>
         <div class="form-group">
-          <%= f.label :introduction, "説明文" %>
-          <%= f.text_area :introduction %>
+          <%= f.label :introduction, "説明文(最低５文字以上)" %>
+          <%= f.text_area :introduction, placeholder: "", class: "col-sm-12 new-field pl-2" %>
         </div>
         <div class="form-group">
           <%= f.label :address, "住所" %>
-          <%= f.text_field :address, placeholder: "東京都港区元赤坂2-1-1" %>
+          <%= f.text_field :address, placeholder: "東京都港区元赤坂2-1-1", class: "col-sm-12 new-field pl-2" %>
         </div>
         <div class="form-group">
-          <%= f.label :tag_name, "タグ" %>
-          <%= f.text_field :tag_name %>
+          <%= f.label :tag_name, "タグ(複数作成する場合は半角スペースで開けてください)" %>
+          <%= f.text_field :tag_name, class: "col-sm-12 new-field pl-2" %>
         </div>
         <div class="form-group">
           <%= f.label :post_images_images, "写真" %>
-          (複数ある場合は、shiftを押しながら選択)
+          (複数ある場合は、shift + Ctrl or commandを押しながら選択)
+          <%= f.attachment_field :post_images_images, multiple: true, class: "col-sm-12 new-field pl-2" %>
           <!--プレビュ画像４枚まで表示-->
           <img id="preview_0" style="width: 15%;">
           <img id="preview_1" style="width: 15%;">
           <img id="preview_2" style="width: 15%;">
           <img id="preview_3" style="width: 15%;">
-          <%= f.attachment_field :post_images_images, multiple: true %>
         </div>
-        <%= f.submit "投稿をする"%>
+        <%= f.submit "投稿をする", class: "btn btn-primary mb-5"%>
       <% end %>
     </div>
   </div>
@@ -45,23 +46,23 @@
       // 4枚以上の画像が選択された時
       alert("４枚までしか投稿できません!");
       $("#post_post_images_images").val = "";
-      
+
       for( let i = 0; i < 4; i ++) {
         $(`#preview_${i}`).attr("src", "");
       }
-      
+
     }else{
       // ４枚まで選択された時にプレビュ表示
       let reader = new Array(4);
       for( let i = 0; i < 4; i += 1) {
         $(`#preview_${i}`).attr("src", "");
       }
-      
+
       for( let i = 0; i < e.target.files.length; i += 1 ){
         reader[i] = new FileReader();
         reader[i].onload = finisher(i,e);
         reader[i].readAsDataURL(e.target.files[i]);
-          
+
         function finisher(i,e){
           return function(e){
             $(`#preview_${i}`).attr("src", e.target.result);

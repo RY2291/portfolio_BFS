@@ -1,5 +1,6 @@
 class Public::PostsController < ApplicationController
-
+  before_action :authenticate_user!, except: [:index, :show, :search, :new]
+  # URLの直打された時の防止
   before_action :ensure_correct_user, { only: [:edit, :update, :destroy] }
 
   def new
