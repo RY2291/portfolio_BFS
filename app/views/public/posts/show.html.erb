@@ -48,7 +48,7 @@
         <!--評価送信フォーム-->
         <%= form_with(model:[@rate,@post], url: rate_path(post_id: @post), method: :post, class: "rate-form", local: true) do |f| %>
           <div id="star"><%= f.hidden_field :rate, :value => "score"%></div>
-          <%= f.submit "評価する" %>
+          <%= f.submit "評価する", class: "ml-3" %>
         <% end %>
       </div>
       <!--所在地-->
@@ -71,9 +71,9 @@
         </div>
         <div class="post-edit mb-4">
           <% if @user == current_user %>
-            <%= link_to "投稿を編集", edit_post_path(@post) %>
+            <%= link_to "投稿を編集", edit_post_path(@post), class: "btn btn-success" %>
           <% end %>
-          <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"} %>
+          <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"}, class: "btn btn-danger" %>
         </div>
     </div>
   </div>

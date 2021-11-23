@@ -46,8 +46,10 @@ class Public::PostsController < ApplicationController
     tag_list = params[:post][:tag_name].split(nil)
     if @post.update(post_params)
        @post.save_tag(tag_list)
+       flash[:notice] = "編集が完了しました！"
        redirect_to post_path(@post.id)
     else
+      flash[:alert] = "編集に失敗しました。操作をやり直してください"
       render :edit
     end
   end
@@ -55,6 +57,7 @@ class Public::PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     post.destroy
+     flash[:notice] = "削除が完了しました！"
     redirect_to user_path(current_user)
   end
 

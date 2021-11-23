@@ -130,6 +130,14 @@
 
 @media screen and (max-width: 550px) {
     .cent {
+        .rate {
+            display: flex;
+            flex-direction: column;
+            
+            .rate-form {
+                margin-left: 0;
+            }
+        }
         #map {
              height: 30rem;
             width: 22rem;
