@@ -22,7 +22,6 @@ class Public::PostsController < ApplicationController
 
   def index
     if selection = params[:keyword]
-      byebug
       @selected_posts = Post.sort(selection).page(params[:page]).per(9)
     else
       @posts = Post.all.page(params[:page]).per(9)
