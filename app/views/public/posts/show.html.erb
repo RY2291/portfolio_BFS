@@ -70,8 +70,9 @@
         <div class="post-edit mb-4">
           <% if @user == current_user %>
             <%= link_to "投稿を編集", edit_post_path(@post), class: "btn btn-success" %>
+            
           <% end %>
-          <%= link_to "削除", post_path(@post.id), method: :delete, data: {confirm: "本当に投稿を削除しますか？"}, class: "btn btn-danger" %>
+          
         </div>
     </div>
   </div>

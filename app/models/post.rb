@@ -15,9 +15,9 @@ class Post < ApplicationRecord
   after_validation :geocode, if: :address_changed?
 
 
-  validates :address, presence: true
+  validates :address, presence: true, uniqueness: true
   validates :title, presence: true
-  validates :introduction, presence: true, length: { minimum: 5}
+  validates :introduction, presence: true, length: { minimum: 5, maximum: 150 }
 
 
 
@@ -46,8 +46,8 @@ class Post < ApplicationRecord
       self.tags << new_post_tag
     end
   end
-  
-  # 投稿の並び替え
+
+  # 投稿並び替え
   def self.sort(selection)
     case selection
     when "new"
