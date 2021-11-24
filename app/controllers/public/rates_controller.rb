@@ -3,6 +3,7 @@ before_action :authenticate_user!
   def create
     rate = current_user.rates.new(rate_params)
     rate.post_id = params[:post_id]
+    # １つの投稿に対して評価をしているかどうか
     rate_count = Rate.where(post_id: params[:post_id]).where(user_id: current_user.id).count
     if rate.valid?
       if rate_count < 1

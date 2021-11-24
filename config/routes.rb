@@ -20,21 +20,23 @@ Rails.application.routes.draw do
 
   scope module: :public do
     root "homes#top"
+    post "/homes/guest_sign_in", to: "homes#guest_sign_in"
+    
     resources :user, only: [:show, :edit, :update] do
       resource :relationships, only: [:create, :destroy]
-      get "follow" => "relationships#follow", as: "follow"
+      get "follow", to: "relationships#follow", as: "follow"
     end
     patch "user/:id/withdraw" => "user#withdraw", as: "user_withdraw"
     get "maps/index"
     get "/map_request", to: "maps#map", as: "map_request"
-    post "/rate" => "rates#create"
+    post "/rate", to: "rates#create"
     resources :maps, only: [:index]
     resources :posts do
       resources :comments, only: [:create, :destroy]
       resource :favorites, only: [:create, :destroy]
     end
     resources :tag do
-      get "posts" => "posts#search"
+      get "posts", to: "posts#search"
     end
   end
 

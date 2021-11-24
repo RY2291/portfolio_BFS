@@ -46,7 +46,8 @@ class Post < ApplicationRecord
       self.tags << new_post_tag
     end
   end
-
+  
+  # 投稿の並び替え
   def self.sort(selection)
     case selection
     when "new"
