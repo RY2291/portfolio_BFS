@@ -12,6 +12,11 @@
         height: 255px;
         object-fit: cover;
     }
+    .card-user {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.75rem;
+    }
 }
 
 .card-body {
@@ -67,10 +72,7 @@
     }
 }
 
-
-
-
-// スライダー-----------------------------------
+// スライダー
  .img-size {
         width: 19.5rem;
         height: 35rem;
@@ -87,8 +89,6 @@
     }
   }
 }
-
-// --------------------------------------------
 
 .cent {
     .cent-t {
@@ -131,10 +131,21 @@
 	}
 }
 
-
 .con-right {
     margin-top: 12rem;
 }
+
+// -------search.html.erb-------------------------------
+
+.tag-title {
+    text-align: center;
+}
+
+.tag-img{
+    width: 18%;
+}
+
+// ---------レスポンシブ---------------------------------------
 
 @media screen and (max-width: 550px) {
     .cent {

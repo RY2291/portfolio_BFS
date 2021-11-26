@@ -1,3 +1,5 @@
+
+
 RSpec.describe "PostImageモデルのテスト" do
   context "Postモデルとのアソシエーション" do
     it "1対Nであるか" do

@@ -1,7 +1,7 @@
-<div class="container mt-5">
+<div class="container">
   <div class="row">
     <div class="col">
-      <h2 class="mb-5">新規投稿</h2>
+      <h2 class="mb-5 mt-5">新規投稿</h2>
       <%= form_with model: @post, local:true do |f| %>
         <%= render "layouts/error_message", model: f.object %>
         <div class="form-group">

@@ -1,60 +1,60 @@
-<div class="top-wrapper img-fluid">
-  <div class="container">
-    <div class="title">
-      <h1><span class="text-danger">A</span>rchitecture</h1>
-      <h1>Facade</h1>
-      <h1>Sahre.</h1>
+<div class="top">
+  <div class="top-wrapper img-fluid">
+    <div class="container">
+      <div class="title">
+        <h1><span class="text-danger">A</span>rchitecture</h1>
+        <h1>Facade</h1>
+        <h1>Sahre.</h1>
+      </div>
+      <p>街で見かけた気になった建築物をコレクションできます。</p>
+      <p></p>
+      <div class="xxx">
+        <div class="pr-3 mt-4">
+         <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary" %>
+        </div>
+        <div class="login-btn pl-3 mt-4">
+         <%= link_to "ログイン", new_user_session_path, class: "btn btn-success" %>
+        </div>
+        <div class="guest-btn mt-4">
+          <%= link_to 'ゲストログイン（閲覧用）', homes_guest_sign_in_path, method: :post, class: "btn btn-secondary" %>
+        </div>
+      </div>
     </div>
-    <p>街で見かけた気になった建築物をコレクションできます。</p>
-    <p></p>
-    <div class="xxx">
-      <div class="pr-3">
-       <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary" %>
+  </div>
+
+  <h2 class="text-center m-5 border-bottom p-1">Content</h2>
+
+  <div class="container-fluid text-center">
+    <div class="row d-flex mb-4">
+      <div class="col-md-4 col-sm-8 p-0 m-0 text-decoration-none">
+        <h3 class="fas fa-check">写真を保存</h3>
+        <p class="text-contents">お気に入りの建築物を<br>最大４枚まで保存できます</p>
       </div>
-      <div class="pl-3">
-       <%= link_to "ログイン", new_user_session_path, class: "btn btn-success" %>
+      <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none">
+        <h3 class="fas fa-check">地図に保存</h3>
+        <p class="text-content">住所を登録することで、<br>地図にマーカを立てる<br>ことができます</p>
       </div>
-      <div>
-        <%= link_to 'ゲストログイン（閲覧用）', homes_guest_sign_in_path, method: :post, class: "btn btn-secondary" %>
+      <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none">
+        <h3 class="fas fa-check">タグで共有</h3>
+        <p class="text-content">タグつけて投稿することで、<br>キーワードで簡単に検索を<br>できます</p>
+      </div>
+    </div>
+    <div class="row row d-flex">
+      <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none">
+        <h3 class="fas fa-check">コメント</h3>
+        <p class="text-content">投稿した建築物について<br>コメントでトークができます</p>
+      </div>
+      <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none">
+        <h3 class="fas fa-check">レビュー</h3>
+        <p class="text-content">投稿についての五段階で評価ができます</p>
+      </div>
+      <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none">
+        <h3 class="fas fa-check">登録について</h3>
+        <p class="text-content mb-4">登録なしでも閲覧はできますが、<br>上記の機能は会員登録を<br>しないと使用できません</p>
       </div>
     </div>
   </div>
 </div>
-
-<h2 class="text-center m-5 border-bottom p-1">Content</h2>
-
-<div class="container-fluid text-center">
-  <div class="row d-flex mb-4">
-    <div class="col-md-4 col-sm-8 p-0 m-0 text-decoration-none">
-      <h3 class="fas fa-check">写真を保存</h3>
-      <p class="text-contents">お気に入りの建築物を<br>最大４枚まで保存できます</p>
-    </div>
-    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none">
-      <h3 class="fas fa-check">地図に保存</h3>
-      <p class="text-content">住所を登録することで、<br>地図にマーカを立てる<br>ことができます</p>
-    </div>
-    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none">
-      <h3 class="fas fa-check">タグで共有</h3>
-      <p class="text-content">タグつけて投稿することで、<br>キーワードで簡単に検索を<br>できます</p>
-    </div>
-  </div>
-  <div class="row row d-flex mb-4">
-    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none">
-      <h3 class="fas fa-check">コメント</h3>
-      <p class="text-content">投稿した建築物について<br>コメントでトークができます</p>
-    </div>
-    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none">
-      <h3 class="fas fa-check">レビュー</h3>
-      <p class="text-content">投稿についての五段階で評価ができます</p>
-    </div>
-    <div class="col-md-4 col-sm-8 p-0 m-auto text-decoration-none">
-      <h3 class="fas fa-check">登録について</h3>
-      <p class="text-content">登録なしでも閲覧はできますが、<br>上記の機能は会員登録を<br>しないと使用できません</p>
-    </div>
-  </div>
-</div>
-
-
 
 
 

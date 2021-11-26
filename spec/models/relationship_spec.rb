@@ -1,3 +1,5 @@
+
+
 RSpec.describe "Relationshipモデルのテスト", type: :model do
   describe "アソシエーションのテスト" do
     context "followingモデルとの関係" do

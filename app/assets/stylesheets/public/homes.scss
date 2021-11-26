@@ -1,3 +1,113 @@
 // Place all the styles related to the public/homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// -------top-----------------------------------
+
+.tag-head {
+ display: flex;
+ .tag-title {
+  margin: 0 auto;
+ }
+}
+
+.top {
+ background-color: white;
+ }
+
+.top-wrapper {
+ padding: 0 0 100px 0;
+ background-image: image-url("top1.jpg") ;
+ width: 100%;
+ background-size: cover;
+ background-position: center ;
+ min-height: 70vh;
+ background-color:rgba(255,255,255,0.2);
+ background-blend-mode:lighten;
+ overflow:hidden;
+}
+
+.title {
+ padding: 50px 0;
+}
+
+.top-wrapper h1 {
+ font-size: 5rem;
+ color: #ffffffcf;
+ font-family: 'Montserrat Subrayada', sans-serif;
+  color: #ffffffcf;
+}
+
+.top-wrapper p {
+ font-size: 2rem;
+ margin-bottom: 90px;
+ background-color: rgba(255,255,255,.2);
+}
+
+.btn {
+ padding: 14px 24px;
+ border: 0 none;
+ font-weight: 700;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+}
+
+.xxx {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.content {
+  justify-content: center;
+}
+
+// -----------新規登録----------------
+.signup-btn {
+  margin: 3rem 0 0 15rem;
+  width: 15rem;
+}
+
+
+// ----------------------------レスポンシブ----------------------------------------------
+// タブレットサイズ
+@media screen and (max-width: 768px){
+ .top-wrapper h1 {
+  font-size: 4.5rem;
+ }
+}
+
+// スマホサイズ
+@media screen and (max-width: 550px){
+ .top-wrapper h1 {
+   font-size: 2.7rem;
+ }
+
+ .signup-btn {
+   margin: 3rem 0 2rem 0;
+   width: 15rem;
+ }
+
+ .grow.d-flex {
+   flex-direction: column;
+ }
+
+
+ .xxx {
+   display: flex;
+   text-align: center;
+   justify-content: space-evenly;
+   flex-direction: column;
+ }
+ .login-btn {
+   padding-left: 0.0625rem;
+   margin-right: 2rem;
+ }
+ .guest-btn {
+
+ }
+
+}
+
+
+// ---------------------------------------------
