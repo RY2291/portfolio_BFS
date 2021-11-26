@@ -6,14 +6,14 @@
         <h5 class="t-heading">ニックネーム</h5>
         <h4><%= @user.name %></h4>
       </div>
-      
+
       <div class="user-introduction">
         <h5 class="t-heading">紹介文</h5>
         <p><%= @user.introduction %></p>
       </div>
       <div class="follow">
         <h5 class="t-heading">フォロー<%= link_to @user.followings.count, user_follow_path(@user.id), class: "following" %></h5>
-        <h5 style="margin-left: 11rem;">フォロワー<%= link_to @user.followers.count, user_follow_path(@user.id), class: "followers" %></h5>
+        <h5 style="margin-left: 7rem;">フォロワー<%= link_to @user.followers.count, user_follow_path(@user.id), class: "followers" %></h5>
       </div>
       <div class="user-edit btn mb-4 mt-4">
         <% if user_signed_in? && current_user %>
@@ -31,7 +31,7 @@
     </div>
     <div class="col-md-7 mt-5">
       <% @posts.each do |post| %>
-      <div class="index-box d-flex mb-3">
+      <div class="index-box mb-3">
         <div class="col-md-5">
           <%= attachment_image_tag post.post_images[0], :image, :fill, 100, 100, format: "jpg", fallback: "no_image-.jpg" %>
           <%= link_to post.title, post_path(post.id) %>

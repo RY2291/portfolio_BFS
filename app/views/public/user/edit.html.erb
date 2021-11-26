@@ -21,25 +21,9 @@
           <%= f.label :email, "メールアドレス" %>
           <%= f.email_field :email, class: "form-control" %>
         </div>
-        <!---->
-        <!--<#% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>-->
-        <!--  <div>Currently waiting confirmation for: <#%= resource.unconfirmed_email %></div>-->
-        <!--<#% end %>-->
-        <!--<div class="form-group">-->
-        <!--  <#%= f.label :password, "パスワード変更(変更の場合)" %>-->
-        <!--  <#%= f.password_field :password, class: "form-control", placeholder: "半角英数6文字以上" %>-->
-        <!--</div>-->
-        <!--<div class="form-group">-->
-        <!--  <#%= f.label :password_confirmation, "パスワード変更(確認)" %>-->
-        <!--  <#%= f.password_field :password_confirmation, class: "form-control", placeholder: "再度ご入力ください" %>-->
-        <!--</div>-->
-        <!--<div class="form-group">-->
-        <!--  <#%= f.label :current_password, "変更にはパスワードが必要です" %>-->
-        <!--  <#%= f.password_field :current_password, class: "form-control", placeholder: "必須項目です" %>-->
-        <!--</div>-->
-        <%= f.submit "変更する", class: "btn btn-primary form-submit-btn" %>
+        <%= f.submit "変更する", class: "btn btn-primary form-submit-btn mb-5" %>
       <% end %>
-      <%= link_to "退会する", user_withdraw_path(current_user), class: "btn btn-danger",
+      <%= link_to "退会する", user_withdraw_path(current_user), class: "btn btn-danger mb-3",
                                                                 data: {confirm: "本当に退会しますか？今までの記録は削除されます"}  %>
     </div>
   </div>
