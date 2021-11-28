@@ -1,0 +1,122 @@
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-md-4 con-lef mt-3">
+     <!--写真エリア -->
+      <h1 class="post-title"><%= @post.title%></h1>
+      <div class="row">
+        <div class="col-md-12">
+          <!---スライド--->
+          <div class="img-box">
+            <div class="img-size">
+              <% @post.post_images.each do |image| %>
+                <%= attachment_image_tag image, :image, fallback: "no_image-.jpg", class: "img-size", style: " width: 19.5rem;  height: 35rem; object-fit: contain;" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--サムネイル-->
+      <div class="row">
+        <div class="col-md-3 col-sm-6 mt-4 mb-4 thum-img">
+          <% @post.post_images.each do |image| %>
+            <%= attachment_image_tag image, :image, fallback: "no_image-.jpg", class: "thum" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 cent mt-3">
+      <div class="cent-t">
+        <h3><i class="fas fa-user" style="margin-right:1rem;"></i><%= link_to @post.user.name, user_path(@post.user.id) %></h3>
+        <p><%= @post.created_at.strftime('%Y/%m/%d') %></p>
+      </div>
+      <!---タグ--->
+      <% @post.tags.each do |tag| %>
+        <div class="tag p-2 m-2">
+          <%= link_to "# #{tag.tag_name}(#{tag.posts.count})", tag_posts_path(tag_id: tag.id), class: "link-text" %>
+        </div>
+      <% end %>
+      <div class="introduction mt-5">
+        <h4>紹介文</h4>
+        <p class="border border-success"><%= @post.introduction %></p>
+      </div>
+      <h4 class="mt-5">評価</h4>
+      <div class="rate">
+        <!--評価を平均点て表示-->
+        <div class="review-rating" id="star-read" data-score="<%= @post.rates.average(:rate) %>"></div>
+        <!--評価送信フォーム-->
+        <%= form_with(model:[@rate,@post], url: rate_path(post_id: @post), method: :post, class: "rate-form", local: true) do |f| %>
+          <div id="star"><%= f.hidden_field :rate, :value => "score"%></div>
+          <%= f.submit "評価する", class: "ml-3" %>
+        <% end %>
+      </div>
+      <!--所在地-->
+      <div class="address mt-5">
+        <h4>所在地</h4>
+        <p><%= @post.address %></p>
+      </div>
+      <!--地図表示-->
+      <div id="map"></div>
+    </div>
+    <div class="col-md-3 con-right">
+        <!--コメントを表示-->
+        <h4 class="mt-4">コメント一覧</h4>
+        <div id="comment_area">
+          <%= render partial: "admin/comments/comment_index", locals: { comments: @comments } %>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // 地図表示
+  function initMap() {
+    // 投稿された住所の緯度経度を取得
+    let buildPosition = {lat: <%= @post.latitude %>, lng: <%= @post.longitude %>}
+    let map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 19,
+            center: buildPosition
+            });
+    let transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
+
+    let contentString = "住所:<%= @post.address %>";
+    let infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    let marker = new google.maps.Marker({
+              position: buildPosition,
+              map: map,
+            });
+
+    marker.addListener("click", function(){
+      infowindow.setContent("<a href='<%= maps_path %>'>" +  contentString + "</a>");
+      infowindow.open(map, marker);
+    });
+  }
+
+  //評価投稿
+  $("#star").raty({
+    starOn: "<%= asset_path("star-on.png") %>",
+    starHalf: "<%= asset_path("star-half.png") %>",
+    starOff: "<%= asset_path("star-off.png") %>",
+    scoreName: "rate[rate]",
+    half: true,
+  });
+// 評価表示
+  $("#star-read").raty({
+    starOn: "<%= asset_path("star-on.png") %>",
+    starHalf: "<%= asset_path("star-half.png") %>",
+    starOff: "<%= asset_path("star-off.png") %>",
+    source: function(){
+      return $(this).attr("data-score")
+    },
+    readOnly: true
+  });
+
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap"></script>
+

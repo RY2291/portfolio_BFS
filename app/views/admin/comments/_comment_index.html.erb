@@ -1,0 +1,12 @@
+<% comments.each do |comment| %>
+  <div>
+    <i class="fas fa-user" style="margin-right:1rem;"></i>
+    <%= link_to comment.user.name, user_path(comment.user.id) %>
+    <div class="border border-dark rounded"><%= comment.comment %></div>
+      コメント日：<%= comment.created_at.strftime('%Y/%m/%d') %>
+      <%= link_to admin_comment_path(comment.id), method: :delete, remote: true do %>
+        <span class="panel-icon"><i class="fas fa-trash ml-3"></i></span>
+      <% end %>
+      <hr>
+  </div>
+<% end %>
