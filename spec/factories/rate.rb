@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :rate do
-    ra
+    rate { 4.5 }
+    
   end
 end

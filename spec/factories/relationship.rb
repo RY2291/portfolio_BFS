@@ -3,3 +3,4 @@ FactoryBot.define do
     association :following
     association :followed
   end
+end
