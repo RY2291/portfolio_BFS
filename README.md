@@ -1,4 +1,4 @@
-# Building Facade Share
+# Architecture Facade Share
 
 ## サイト概要
   
@@ -47,4 +47,4 @@ https://docs.google.com/spreadsheets/d/15utyIaRegX0az2SnZkcQ0agFIIjrcn711np0cJyW
 - IDE：Cloud9
 
 ## 使用素材
-- 使用の度に随時追加予定
+- https://pixabay.com/
