@@ -36,7 +36,7 @@ URL:http://architecture-facade-share.com/
   * ゲストログイン
 *投稿機能
   * 複数画像投稿(refile,refile-mini_magick)
-  *　投稿画像スライダー化（slick）
+  * 投稿画像スライダー化（slick）
   * 編集
   * 削除
 * ユーザ機能
@@ -55,7 +55,7 @@ URL:http://architecture-facade-share.com/
   * マーカーに投稿詳細へのリンク設置
   * 地名、住所検索（Ajax, geocoder）
 *　　ページネーション機能（kaminari）
-  *　投稿一覧　 
+  * 投稿一覧　 
 * 管理者機能
   * ユーザの退会（論理削除）
   * 不適切なコメント、投稿の削除
