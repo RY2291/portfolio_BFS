@@ -32,17 +32,12 @@
 
 
 ## 設計書
-* 画面遷移図
-https://drive.google.com/file/d/1I4d5bpURJQPbVXqGRoxjpa7csk7C0kfE/view?usp=sharing
-* ワイヤーフレーム
-https://drive.google.com/file/d/1yGUBkGdXNSjynq-Jyc_mx_MT5DslcybY/view?usp=sharing
-https://drive.google.com/file/d/1C9t6DBFpK-kbx9wQUIdt4nKaBvAYRwLr/view?usp=sharing
-* ER図
-https://drive.google.com/file/d/1zTCZrhx1dPHrQj7y7TfJafvEbKx8Idtl/view?usp=sharing
+* [画面遷移図](https://drive.google.com/file/d/1I4d5bpURJQPbVXqGRoxjpa7csk7C0kfE/view?usp=sharing)
+* [テーブル設計書](https://docs.google.com/spreadsheets/d/1Bj5w3MNhR4FELlw8uFvHRrjN6xEXT140ynu_HUSOsMc/edit#gid=856357510)
+* [ER図](https://drive.google.com/file/d/1zTCZrhx1dPHrQj7y7TfJafvEbKx8Idtl/view?usp=sharing)
 
 
-## チャレンジ要素一覧
-https://docs.google.com/spreadsheets/d/15utyIaRegX0az2SnZkcQ0agFIIjrcn711np0cJyW-5Y/edit#gid=0
+## [チャレンジ要素一覧](https://docs.google.com/spreadsheets/d/15utyIaRegX0az2SnZkcQ0agFIIjrcn711np0cJyW-5Y/edit#gid=0)
 
 ## 開発環境
 - OS：Linux(CentOS)
