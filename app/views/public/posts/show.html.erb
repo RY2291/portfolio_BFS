@@ -108,7 +108,7 @@
   }
 
   //評価投稿
-  $('#star').empty();
+  $('#star').empty();   //星部分を一度削除→再度読み込む。
   $("#star").raty({
     starOn: "<%= asset_path("star-on.png") %>",
     starHalf: "<%= asset_path("star-half.png") %>",
