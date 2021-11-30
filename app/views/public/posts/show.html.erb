@@ -70,9 +70,9 @@
         <div class="post-edit mb-4">
           <% if @user == current_user %>
             <%= link_to "投稿を編集", edit_post_path(@post), class: "btn btn-success" %>
-            
+
           <% end %>
-          
+
         </div>
     </div>
   </div>
@@ -108,6 +108,7 @@
   }
 
   //評価投稿
+  $('#star').empty();
   $("#star").raty({
     starOn: "<%= asset_path("star-on.png") %>",
     starHalf: "<%= asset_path("star-half.png") %>",
@@ -116,6 +117,7 @@
     half: true,
   });
 // 評価表示
+  $("#star-read").empty();
   $("#star-read").raty({
     starOn: "<%= asset_path("star-on.png") %>",
     starHalf: "<%= asset_path("star-half.png") %>",

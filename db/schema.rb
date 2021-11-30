@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2021_11_14_020211) do
     t.string "address"
     t.float "latitude"
     t.float "longitude"
-    t.float "rate"
+    t.float "rate"po
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

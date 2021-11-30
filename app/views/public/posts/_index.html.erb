@@ -21,6 +21,7 @@
   </div>
   <script>
   // 評価表示
+    $('#star-read-<%= post.id %>').empty();
     $("#star-read-<%= post.id %>").raty({
       starOn: "<%= asset_path("star-on.png") %>",
       starHalf: "<%= asset_path("star-half.png") %>",
