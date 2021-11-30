@@ -56,7 +56,7 @@
     marker[i].addListener('click', function() {
       let id_set = contentString[i];
       let address_set = contentAddress[i];
-      let url_set = `https://5f61991cb31140d1b70213e974362f93.vfs.cloud9.us-east-1.amazonaws.com/posts/${id_set}`;
+      let url_set = `/posts/${id_set}`;
       let link_set = `<a href="${url_set}">${address_set}</a>`;
       infowindow[i].setContent(link_set);
       infowindow[i].open(map, marker[i]);
