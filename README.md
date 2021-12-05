@@ -72,6 +72,10 @@ URL:http://architecture-facade-share.com/
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
 - IDE：Cloud9
+- 
+## 本番環境  
+* AWS（EC2、RDS for MySQL、EIP、Route53）
+* Nginx、Puma
 
 ## 使用素材
 - https://pixabay.com/
