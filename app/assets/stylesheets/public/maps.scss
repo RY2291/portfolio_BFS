@@ -1,3 +1,20 @@
-// Place all the styles related to the public/maps controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.index {
+  text-align: center;
+  padding-top: 2rem;
+  .title {
+    font-family: serif;
+    padding: 0;
+  }
+}
+
+
+#map {
+  height: 700px;
+  width: 100%;
+}
+
+
+.form {
+  text-align: right;
+  padding: 0 1rem 1rem 0;
+}
