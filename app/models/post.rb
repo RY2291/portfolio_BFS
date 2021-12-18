@@ -20,8 +20,6 @@ class Post < ApplicationRecord
   validates :introduction, presence: true, length: { minimum: 5, maximum: 150 }
 
 
-
-
   def favorited_by?(user)
      return false if user.nil?
      favorites.where(user_id: user.id).exists?
@@ -55,9 +53,9 @@ class Post < ApplicationRecord
     when "old"
       return all.order(created_at: :ASC)
     when "likes"
-      return where(id: Favorite.group(:post_id).order(Arel.sql("count(post_id) desc")).pluck(:post_id))
+      return Post.select('posts.*', 'count(favorites.id) AS favorites').left_joins(:favorites).group('posts.id').order('favorites DESC')
     when "dislikes"
-      return where(id: Favorite.group(:post_id).order(Arel.sql("count(post_id) asc")).pluck(:post_id))
+      return Post.select('posts.*', 'count(favorites.id) AS favorites').left_joins(:favorites).group('posts.id').order('favorites ASC')
     end
   end
 
