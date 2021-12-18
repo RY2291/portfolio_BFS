@@ -1,39 +1,34 @@
 # frozen_string_literal: true
 
-#require 'rails_helper'
+require 'rails_helper'
 
 RSpec.describe "Commentモデルのテスト", type: :model do
   describe "バリデーションのテスト" do
-
-    subject { comment.valid? }
-      let!(:user) { create(:user) }
-      let!(:post) { create(:post, user_id: user.id) }
-      let(:comment) { build(:comment, user_id: user.id, post_id: post.id) }
-
     context "commentカラム" do
       it "空欄でないこと" do
-        comment.comment = ""
-        is_expected(comment.comment).to be("")
+        expect(FactoryBot.build(:comment)).to be_valid
       end
 
       it "2文字以上であること: 1文字は×" do
-        comment.comment = Faker::Lorem.chracters(number: 1)
-        is_expected.to eq false
+        comment = Faker::Lorem.characters(number: 1)
+        c = Comment.new(comment: comment, user_id: 1, post_id: 1)
+        expect(c.valid?).to be_falsey
       end
 
       it "2文字以上であること: 2文字はo" do
-        comment.comment = Faker::Lorem.chracters(number: 2)
-        is_expected.to eq true
+        comment = Faker::Lorem.characters(number: 2)
+        expect(comment).to be_truthy
       end
-
+      
       it "150文字以下であること: 150文字はo" do
-        comment.comment = Faker::Lorem.chracters(number: 150)
-        is_expected.to eq true
+        comment = Faker::Lorem.characters(number: 150)
+        expect(comment).to be_truthy
       end
 
       it "150文字以下であること: 151文字はx" do
-        comment.comment = Faker::Lorem.chracters(number: 151)
-        is_expected.to eq false
+        comment = Faker::Lorem.characters(number: 151)
+        c = Comment.new(comment: comment, user_id: 1, post_id: 1)
+        expect(c.valid?).to be_falsey
       end
     end
   end

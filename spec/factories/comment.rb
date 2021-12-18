@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :comment do
-    comment { Faker::Lorem.chracters(number: 5) }
+    comment { Faker::Lorem.characters(number:5) }
     association :user
     association :post
   end
