@@ -58,6 +58,5 @@ class Post < ApplicationRecord
       return Post.select('posts.*', 'count(favorites.id) AS favorites').left_joins(:favorites).group('posts.id').order('favorites ASC')
     end
   end
-
-
+  
 end
