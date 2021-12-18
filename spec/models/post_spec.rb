@@ -5,11 +5,6 @@ require 'rails_helper'
 RSpec.describe "Postモデルのテスト", type: :model do
 
   describe "バリデーションのテスト" do
-    # subject { post.valid? }
-
-    # let(:user) {create(:user) }
-    # let!(:post) { build(:post, user_id: user.id) }
-    
     before do
       @post = FactoryBot.create(:post)
     end
@@ -26,32 +21,37 @@ RSpec.describe "Postモデルのテスト", type: :model do
         expect(@post.title).to_not eq ""
       end
       it "５文字以上であること: 1文字は×" do
-        @post.introduction = Faker::Lorem.characters(1)
-        expect(@post.introduction).to eq false
+        introduction = Faker::Lorem.characters(number: 1)
+        p = Post.new(introduction: introduction, user_id: 1)
+        expect(p.valid?).to be_falsey
       end
       it "５文字以上であること: 2文字は×" do
-        post.introduction = Faker::Lorem.characters(2)
-        expect(post.introduction).to be_invalid
+        introduction = Faker::Lorem.characters(number: 2)
+        p = Post.new(introduction: introduction, user_id: 2)
+        expect(p.valid?).to be_falsey
       end
       it "５文字以上であること: 3文字は×" do
-        post.introduction = Faker::Lorem.characters(3)
-        expect(post.introduction).to be_invalid
+        introduction = Faker::Lorem.characters(number: 3)
+        p = Post.new(introduction: introduction, user_id: 3)
+        expect(p.valid?).to be_falsey
       end
       it "５文字以上であること: 4文字は×" do
-        post.introduction = Faker::Lorem.characters(4)
-        expect(post.introduction).to be_invalid
+        introduction = Faker::Lorem.characters(number: 4)
+        p = Post.new(introduction: introduction, user_id: 4)
+        expect(p.valid?).to be_falsey
       end
       it "５文字以上であること: 5文字はo" do
-        post.introduction = Faker::Lorem.characters(5)
-        expect(post.introduction).to eq true
+        introduction = Faker::Lorem.characters(number: 5)
+        expect(introduction).to be_truthy
       end
       it "150文字以下であること: 150文字はo" do
-        post.introduction = Faker::Lorem.characters(150)
-        expect(post.introduction).to eq true
+        introduction = Faker::Lorem.characters(number: 150)
+        expect(introduction).to be_truthy
       end
       it "150文字以上であること: 151文字は×" do
-        post.introduction = Faker::Lorem.characters(151)
-        expect(post.introduction).to eq false
+        introduction = Faker::Lorem.characters(number: 151)
+        p = Post.new(introduction: introduction, user_id: 5)
+        expect(p.valid?).to be_falsey
       end
     end
 
@@ -60,10 +60,8 @@ RSpec.describe "Postモデルのテスト", type: :model do
         expect(@post.address).to_not eq ""
       end
       it "住所が一意であること" do
-        duplicate_post = @post.dup
-        duplicate_post.address = @post.address.upcase
-        duplicate_post.save!
-        expect(duplicate_post).to be_invalid
+        re_post = Post.new(address: "東京都渋谷区富ヶ谷1-49-3")
+        expect(re_post).to be_invalid
       end
     end
   end
