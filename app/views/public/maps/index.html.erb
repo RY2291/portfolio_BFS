@@ -16,8 +16,10 @@
 
 <script>
   let map
-  var contentString = <%= @posts.pluck(:id).to_s.html_safe %>;
-  var contentAddress = <%= @posts.pluck(:address).to_s.html_safe %>;
+  let contentString = <%= @posts.pluck(:id).to_s.html_safe %>;
+  let contentTitle = <%= @posts.pluck(:title).to_s.html_safe %>;
+  let lat = <%= @posts.pluck(:latitude).to_s %>
+  let lng = <%= @posts.pluck(:longitude).to_s %>
   let infowindow = [];
   let markerLatLng = {};
   let marker = [];
@@ -30,10 +32,8 @@
             });
     // 都市の交通網表示
     let transitLayer = new google.maps.TransitLayer();
+
     // 地図に複数マーカ表示
-    console.log(contentString);
-    let lat = <%= @posts.pluck(:latitude).to_s %>
-    let lng = <%= @posts.pluck(:longitude).to_s %>
     for (var i = 0; i < <%=@posts.length%>; i++) {
       // 緯度経度のデータ作成
       markerLatLng = {lat: lat[i], lng: lng[i]};
@@ -46,19 +46,54 @@
       });
 
       markerEvent(i);
-  }
+    }
+
+    //クリックイベント
+    map.addListener('click', function(e) {
+      clickMap(e.latLng, map);
+    });
   }
   // マーカークリック時に吹き出しを表示する
   function markerEvent(i) {
     marker[i].addListener('click', function() {
       let id_set = contentString[i];
-      let address_set = contentAddress[i];
+      let title_set = contentTitle[i];
       let url_set = `/posts/${id_set}`;
-      let link_set = `<a href="${url_set}">${address_set}</a>`;
+      let link_set = `<a href="${url_set}">${title_set}</a>`;
+
       infowindow[i].setContent(link_set);
       infowindow[i].open(map, marker[i]);
     });
-  };
+  }
+
+  // クリックで住所取得
+  function clickMap(geo, map) {
+    lat = geo.lat();
+    lng = geo.lng();
+    // 座標取得
+    let getCoodinate = new google.maps.LatLng(lat, lng);
+    // 
+    let address = new google.maps.Geocoder();
+    address.geocode(
+      {"latLng": getCoodinate},
+      function(reslutAddress) {
+        // 
+        let getAdress = new String(reslutAddress[0].formatted_address);
+        console.log(getAdress);
+        document.getElementById("aa").innerHTML
+          = "<p>緯度=" + lat + ", 経度=" + lng + "<br>"
+                        + "住所=" + getAdress + "</p>";
+      }
+      );
+
+    document.getElementById('lat').value = lat;
+    document.getElementById('lng').value = lng;
+  }
+
 </script>
+
+<div id="aa"></div>
+緯度：<input type="text" id="lat" name="lat" value="" size="20">　経度：<input type="text" id="lng" name="lng" value="" size="20">
+
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" ></script>
