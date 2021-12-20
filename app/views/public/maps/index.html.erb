@@ -12,6 +12,9 @@
 </div>
 
 
+
+
+
 <div id="map"></div>
 
 <script>
@@ -72,28 +75,28 @@
     lng = geo.lng();
     // 座標取得
     let getCoodinate = new google.maps.LatLng(lat, lng);
-    // 
+    //
     let address = new google.maps.Geocoder();
     address.geocode(
       {"latLng": getCoodinate},
       function(reslutAddress) {
-        // 
-        let getAdress = new String(reslutAddress[0].formatted_address);
+        //
+        let getAdress = new String(reslutAddress[0].formatted_address.replace(/^日本、〒\d{3}-\d{4}/, ''));
         console.log(getAdress);
         document.getElementById("aa").innerHTML
-          = "<p>緯度=" + lat + ", 経度=" + lng + "<br>"
-                        + "住所=" + getAdress + "</p>";
+          = "<p>" + getAdress + "</p>";
       }
       );
-
-    document.getElementById('lat').value = lat;
-    document.getElementById('lng').value = lng;
   }
-
 </script>
 
-<div id="aa"></div>
-緯度：<input type="text" id="lat" name="lat" value="" size="20">　経度：<input type="text" id="lng" name="lng" value="" size="20">
+
+<p>投稿したい場所をクリック</p>
+<p>クリックすると下の「住所」にクリックした住所が表示</p>
+住所　<div id="aa"></div>
+
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" ></script>
+
+
