@@ -17,10 +17,10 @@ class Admin::UsersController < ApplicationController
       render edit_admin_user(user.id)
     end
   end
-  
-  private 
+
+  private
   def admin_user_params
     params.require(:user).permit(:name, :email, :is_deleted)
   end
-  
+
 end

@@ -8,8 +8,7 @@ class Public::PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.user_id = current_user.id
+    @post = current_user.posts.new(post_params)
     tag_list = params[:post][:tag_name].split(nil)
     if @post.save
       @post.save_tag(tag_list)
@@ -39,12 +38,12 @@ class Public::PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
     @post_tag = @post.tags
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
     tag_list = params[:post][:tag_name].split(nil)
     if @post.update(post_params)
        @post.save_tag(tag_list)
@@ -56,7 +55,7 @@ class Public::PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:id])
+    post = current_user.posts.find(params[:id])
     post.destroy
     redirect_to user_path(current_user), notice: "削除が完了しました！"
   end

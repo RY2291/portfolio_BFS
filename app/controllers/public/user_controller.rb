@@ -12,7 +12,7 @@ class Public::UserController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to(user_path(current_user)), notice: "更新できました！"
+      redirect_to user_path(current_user), notice: "更新できました！"
     else
       render :edit
     end
