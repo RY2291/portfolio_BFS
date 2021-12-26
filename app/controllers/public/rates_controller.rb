@@ -8,10 +8,9 @@ before_action :authenticate_user!
     if rate.valid?
       if rate_count < 1
         rate.save
-        flash[:notice] = "評価しました！"
-        redirect_to post_path(params[:post_id])
+        redirect_to post_path(params[:post_id]), notice: "評価しました！"
       else
-        flash[:alert] = "既に評価がされています"
+        flash.now[:alert] = "既に評価がされています"
         redirect_to post_path(params[:post_id])
       end
     end
