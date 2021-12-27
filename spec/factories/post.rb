@@ -11,5 +11,6 @@ FactoryBot.define do
     introduction { "kokoko" }
     address { "千葉県浦安市当代島2-10-17"}
     tag_name { "マンション" }
+    user
   end
 end
