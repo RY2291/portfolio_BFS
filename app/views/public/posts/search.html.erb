@@ -1,6 +1,7 @@
 <div class="container-fluid pt-5">
   <div class="tag-head">
     <%= form_with url: tag_posts_path(tag_id: @tag.id), method: :get, local: true do |f| %>
+      <%= f.hidden_field :tag_name, :value => @tag.tag_name %>
       <%= f.select :keyword, [["新しい順", "new"],
                         ["古い順", "old"],
                         ["いいねが多い順", "likes"],

@@ -61,7 +61,11 @@ class Public::PostsController < ApplicationController
   end
 
   def search
-    @tags = Tag.all
+    if selection = params[:keyword]
+      @selected_posts = Tag.sort(selection,params[:tag_name]).page(params[:page]).per(9)
+    else
+      @posts = Post.all.page(params[:page]).per(9)
+    end
     @tag = Tag.find(params[:tag_id])
     @posts = @tag.posts.all
   end
