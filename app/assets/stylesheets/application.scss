@@ -70,3 +70,11 @@ main {
 .navbar-dark .navbar-nav .nav-link {
   color: rgb(255, 255, 255);
 }
+
+// ----------------------------レスポンシブ----------------------------------------------
+// スマホサイズ
+@media screen and (max-width: 550px) {
+ .alert {
+  padding-top: 2.5rem;
+ }
+}

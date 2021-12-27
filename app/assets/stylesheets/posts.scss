@@ -149,6 +149,11 @@
 
 @media screen and (max-width: 550px) {
     .cent {
+        .cent-t {
+            h3 {
+            margin-right: 8.5rem;
+            }
+        }
         .rate {
             display: flex;
             flex-direction: column;
@@ -163,9 +168,12 @@
         }
     }
     .thum-img {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .tag-head {
+        flex-direction: column;
     }
 
 }
