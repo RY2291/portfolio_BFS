@@ -24,7 +24,7 @@ class Public::PostsController < ApplicationController
     else
       @posts = Post.all.page(params[:page]).per(9)
     end
-    @tag = Tag.all
+    @tag = Tag.eager_load(:tag_maps)
   end
 
   def show
